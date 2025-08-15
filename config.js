@@ -14,7 +14,7 @@ window.WEBSITE_CONFIG = {
     
     // Contact Information
     contact: {
-        email: "thclark@mit.edu",
+        email: "info@hsp2026.org",
         website: "https://hsp2026.org"
     },
     
