@@ -45,6 +45,33 @@
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .map-style-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 8px;
+        }
+
+        .map-style-selector select {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .map-style-selector select:focus {
+            border-color: #0f766e;
         }
 
         #conference-map {
@@ -228,6 +255,16 @@
         <section class="map-section">
             <div class="container">
                 <div class="map-container">
+                    <div class="map-style-selector">
+                        <select id="map-style-selector">
+                            <option value="osm">OpenStreetMap</option>
+                            <option value="satellite">Satellite</option>
+                            <option value="terrain">Terrain</option>
+                            <option value="dark">Dark Theme</option>
+                            <option value="light">Light Theme</option>
+                            <option value="streets">Streets</option>
+                        </select>
+                    </div>
                     <div id="conference-map"></div>
                 </div>
 
@@ -343,16 +380,51 @@
     <script>
         // Initialize the map
         document.addEventListener('DOMContentLoaded', function() {
-            // MIT coordinates
-            const mitCenter = [42.3601, -71.0942];
+            // Get map configuration from config file
+            const mapConfig = window.WEBSITE_CONFIG.mapLocations;
             
-            // Create map
-            const map = L.map('conference-map').setView(mitCenter, 16);
+            // Create map using config center and zoom
+            const map = L.map('conference-map').setView(mapConfig.center, mapConfig.zoom);
             
-            // Add OpenStreetMap tiles
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            // Define different tile layers
+            const tileLayers = {
+                osm: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }),
+                satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                    attribution: '© <a href="https://www.esri.com/">Esri</a>'
+                }),
+                terrain: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                    attribution: '© <a href="https://opentopomap.org/">OpenTopoMap</a>'
+                }),
+                dark: L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+                }),
+                light: L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+                }),
+                streets: L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+                })
+            };
+            
+            // Add default tile layer
+            tileLayers.osm.addTo(map);
+            
+            // Handle map style changes
+            document.getElementById('map-style-selector').addEventListener('change', function() {
+                const selectedStyle = this.value;
+                
+                // Remove current tile layer
+                Object.values(tileLayers).forEach(layer => {
+                    if (map.hasLayer(layer)) {
+                        map.removeLayer(layer);
+                    }
+                });
+                
+                // Add new tile layer
+                tileLayers[selectedStyle].addTo(map);
+            });
             
             // Custom icons for different location types
             const mainVenueIcon = L.divIcon({
@@ -390,56 +462,59 @@
                 iconAnchor: [10, 10]
             });
             
-            // Add location markers
-            // Main Conference Venues
-            L.marker([42.3598, -71.0921], {icon: mainVenueIcon})
-                .bindPopup('<b>Building 10 - Main Auditorium</b><br>Room 10-250<br>Main conference venue')
-                .addTo(map);
+            // Function to get icon based on location type
+            function getIconForType(type) {
+                switch(type) {
+                    case 'main':
+                        return mainVenueIcon;
+                    case 'accommodation':
+                        return accommodationIcon;
+                    case 'dining':
+                        return diningIcon;
+                    case 'transport':
+                        return transportIcon;
+                    case 'general':
+                    default:
+                        return generalIcon;
+                }
+            }
             
-            // MIT Buildings
-            L.marker([42.3612, -71.0945], {icon: generalIcon})
-                .bindPopup('<b>MIT Student Center</b><br>Building W20<br>Student services and dining')
-                .addTo(map);
+            // Add location markers from config
             
-            L.marker([42.3584, -71.0906], {icon: generalIcon})
-                .bindPopup('<b>Stata Center</b><br>Building 32<br>Computer Science and AI Lab')
-                .addTo(map);
+            // Add main venues
+            mapConfig.venues.forEach(venue => {
+                L.marker(venue.coordinates, {icon: getIconForType(venue.type)})
+                    .bindPopup(`<b>${venue.name}</b><br>${venue.description}`)
+                    .addTo(map);
+            });
             
-            // Transportation
-            L.marker([42.3622, -71.0864], {icon: transportIcon})
-                .bindPopup('<b>Kendall/MIT Station</b><br>MBTA Red Line<br>Main public transit access')
-                .addTo(map);
+            // Add accommodation locations
+            mapConfig.accommodation.forEach(location => {
+                L.marker(location.coordinates, {icon: getIconForType(location.type)})
+                    .bindPopup(`<b>${location.name}</b><br>${location.description}`)
+                    .addTo(map);
+            });
             
-            // Dining Options
-            L.marker([42.3605, -71.0935], {icon: diningIcon})
-                .bindPopup('<b>Lobdell Food Court</b><br>Building W20<br>Various dining options')
-                .addTo(map);
+            // Add dining locations
+            mapConfig.dining.forEach(location => {
+                L.marker(location.coordinates, {icon: getIconForType(location.type)})
+                    .bindPopup(`<b>${location.name}</b><br>${location.description}`)
+                    .addTo(map);
+            });
             
-            L.marker([42.3615, -71.0968], {icon: diningIcon})
-                .bindPopup('<b>Next House Dining</b><br>Building W71<br>Campus dining hall')
-                .addTo(map);
+            // Add transport locations
+            mapConfig.transport.forEach(location => {
+                L.marker(location.coordinates, {icon: getIconForType(location.type)})
+                    .bindPopup(`<b>${location.name}</b><br>${location.description}`)
+                    .addTo(map);
+            });
             
-            // Nearby Hotels
-            L.marker([42.3665, -71.1028], {icon: accommodationIcon})
-                .bindPopup('<b>Le Meridien Cambridge</b><br>20 Sidney Street<br>Luxury hotel near MIT')
-                .addTo(map);
-            
-            L.marker([42.3679, -71.1166], {icon: accommodationIcon})
-                .bindPopup('<b>Hotel Marlowe</b><br>25 Edwin H Land Blvd<br>Boutique hotel in Kendall Square')
-                .addTo(map);
-            
-            L.marker([42.3736, -71.1186], {icon: accommodationIcon})
-                .bindPopup('<b>Residence Inn Cambridge</b><br>6 Cambridge Center<br>Extended stay hotel')
-                .addTo(map);
-            
-            // More Points of Interest
-            L.marker([42.3590, -71.0935], {icon: generalIcon})
-                .bindPopup('<b>MIT Libraries</b><br>Barker Engineering Library<br>Research resources')
-                .addTo(map);
-            
-            L.marker([42.3581, -71.0913], {icon: generalIcon})
-                .bindPopup('<b>MIT Museum</b><br>Building N52<br>Science and technology exhibits')
-                .addTo(map);
+            // Add points of interest
+            mapConfig.pointsOfInterest.forEach(location => {
+                L.marker(location.coordinates, {icon: getIconForType(location.type)})
+                    .bindPopup(`<b>${location.name}</b><br>${location.description}`)
+                    .addTo(map);
+            });
         });
     </script>
 </body>
