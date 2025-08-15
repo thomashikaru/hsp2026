@@ -7,7 +7,7 @@ window.WEBSITE_CONFIG = {
     
     // Conference Details
     conferenceName: "HSP 2026 Conference",
-    conferenceTagline: "Advancing Human Systems Performance",
+    conferenceTagline: "The Annual Human Sentence Processing Conference",
     conferenceDate: "March 26-28, 2026",
     conferenceLocation: "MIT Campus, Cambridge, MA",
     conferenceTheme: "Language and Thought in Minds and Machines",
@@ -130,7 +130,7 @@ window.WEBSITE_CONFIG = {
                     type: "poster",
                     title: "Research Poster Presentations",
                     speaker: "",
-                    description: "Interactive poster session featuring cutting-edge research in human systems performance.",
+                    description: "Interactive poster session.",
                     location: "Exhibition Hall"
                 }
             ]
@@ -403,7 +403,7 @@ function updatePageContent() {
     
     // Update footer tagline
     const footerTaglines = document.querySelectorAll('.footer-tagline');
-    footerTaglines.forEach(el => el.textContent = window.WEBSITE_CONFIG.conferenceTheme);
+    footerTaglines.forEach(el => el.textContent = window.WEBSITE_CONFIG.conferenceTagline);
     
     // Update contact info
     const emailElements = document.querySelectorAll('.contact-email');
