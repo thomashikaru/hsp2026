@@ -401,12 +401,13 @@ function updatePageContent() {
     const themeElements = document.querySelectorAll('.conference-theme');
     themeElements.forEach(el => el.textContent = window.WEBSITE_CONFIG.conferenceTheme);
     
+    // Update footer tagline
+    const footerTaglines = document.querySelectorAll('.footer-tagline');
+    footerTaglines.forEach(el => el.textContent = window.WEBSITE_CONFIG.conferenceTheme);
+    
     // Update contact info
     const emailElements = document.querySelectorAll('.contact-email');
     emailElements.forEach(el => el.textContent = window.WEBSITE_CONFIG.contact.email);
-    
-    const phoneElements = document.querySelectorAll('.contact-phone');
-    phoneElements.forEach(el => el.textContent = window.WEBSITE_CONFIG.contact.phone);
     
     // Update schedule day dates
     const day1Elements = document.querySelectorAll('.schedule-day1-date');
