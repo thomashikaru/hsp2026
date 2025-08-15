@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map - HSP 2026 Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <style>
+        .map-hero {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .map-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .map-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .map-section {
+            padding: 80px 0;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        #conference-map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .map-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid #0f766e;
+        }
+
+        .location-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-card.main-venue {
+            border-left-color: #dc2626;
+        }
+
+        .location-card.accommodation {
+            border-left-color: #7c3aed;
+        }
+
+        .location-card.dining {
+            border-left-color: #059669;
+        }
+
+        .location-card.transport {
+            border-left-color: #d97706;
+        }
+
+        .location-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .location-icon {
+            font-size: 1.5rem;
+        }
+
+        .location-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .location-address {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .map-legend {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .legend-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        .legend-color.main {
+            background: #dc2626;
+        }
+
+        .legend-color.accommodation {
+            background: #7c3aed;
+        }
+
+        .legend-color.dining {
+            background: #059669;
+        }
+
+        .legend-color.transport {
+            background: #d97706;
+        }
+
+        .legend-color.general {
+            background: #0f766e;
+        }
+
+        @media (max-width: 768px) {
+            .map-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #conference-map {
+                height: 400px;
+            }
+
+            .map-info {
+                grid-template-columns: 1fr;
+            }
+
+            .legend-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HSP 2026</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="deadlines.html" class="nav-link">Deadlines</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="map.html" class="nav-link">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="map-hero">
+            <div class="container">
+                <h1>Campus Map</h1>
+                <p>Navigate MIT Campus and find all conference venues and important locations</p>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container">
+                    <div id="conference-map"></div>
+                </div>
+
+                <div class="map-legend">
+                    <h3 class="legend-title">Map Legend</h3>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-color main"></div>
+                            <span>Main Conference Venues</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color accommodation"></div>
+                            <span>Recommended Hotels</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color dining"></div>
+                            <span>Dining Options</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color transport"></div>
+                            <span>Transportation</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color general"></div>
+                            <span>Points of Interest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-info">
+                    <div class="location-card main-venue">
+                        <h3 class="location-title">
+                            <span class="location-icon">🏛️</span>
+                            Main Conference Venue
+                        </h3>
+                        <p class="location-description">
+                            Building 10 houses the main auditorium (10-250) where keynote presentations and major sessions will take place.
+                        </p>
+                        <p class="location-address">Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139</p>
+                    </div>
+
+                    <div class="location-card accommodation">
+                        <h3 class="location-title">
+                            <span class="location-icon">🏨</span>
+                            Nearby Hotels
+                        </h3>
+                        <p class="location-description">
+                            Several recommended hotels within walking distance or short transit to MIT campus.
+                        </p>
+                        <p class="location-address">Various locations in Cambridge and Boston</p>
+                    </div>
+
+                    <div class="location-card dining">
+                        <h3 class="location-title">
+                            <span class="location-icon">🍽️</span>
+                            Dining Options
+                        </h3>
+                        <p class="location-description">
+                            Campus dining halls, cafes, and nearby restaurants for meals and coffee breaks.
+                        </p>
+                        <p class="location-address">Multiple locations on and around campus</p>
+                    </div>
+
+                    <div class="location-card transport">
+                        <h3 class="location-title">
+                            <span class="location-icon">🚇</span>
+                            Transportation
+                        </h3>
+                        <p class="location-description">
+                            MBTA Red Line station (Kendall/MIT) and other transportation options to reach the campus.
+                        </p>
+                        <p class="location-address">Kendall/MIT Station, Main Street, Cambridge, MA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HSP 2026 Conference</h3>
+                    <p>Advancing the field of human systems performance through collaboration and innovation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="deadlines.html">Important Deadlines</a></li>
+                        <li><a href="schedule.html">Conference Schedule</a></li>
+                        <li><a href="map.html">Campus Map</a></li>
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <span class="contact-email">thclark@mit.edu</span></p>
+                    <p>Phone: <span class="contact-phone">+1 (555) 123-4567</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HSP Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize the map
+        document.addEventListener('DOMContentLoaded', function() {
+            // MIT coordinates
+            const mitCenter = [42.3601, -71.0942];
+            
+            // Create map
+            const map = L.map('conference-map').setView(mitCenter, 16);
+            
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            // Custom icons for different location types
+            const mainVenueIcon = L.divIcon({
+                className: 'custom-marker main-venue-marker',
+                html: '<div style="background: #dc2626; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                iconSize: [26, 26],
+                iconAnchor: [13, 13]
+            });
+            
+            const accommodationIcon = L.divIcon({
+                className: 'custom-marker accommodation-marker',
+                html: '<div style="background: #7c3aed; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            
+            const diningIcon = L.divIcon({
+                className: 'custom-marker dining-marker',
+                html: '<div style="background: #059669; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            
+            const transportIcon = L.divIcon({
+                className: 'custom-marker transport-marker',
+                html: '<div style="background: #d97706; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            
+            const generalIcon = L.divIcon({
+                className: 'custom-marker general-marker',
+                html: '<div style="background: #0f766e; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            
+            // Add location markers
+            // Main Conference Venues
+            L.marker([42.3598, -71.0921], {icon: mainVenueIcon})
+                .bindPopup('<b>Building 10 - Main Auditorium</b><br>Room 10-250<br>Main conference venue')
+                .addTo(map);
+            
+            // MIT Buildings
+            L.marker([42.3612, -71.0945], {icon: generalIcon})
+                .bindPopup('<b>MIT Student Center</b><br>Building W20<br>Student services and dining')
+                .addTo(map);
+            
+            L.marker([42.3584, -71.0906], {icon: generalIcon})
+                .bindPopup('<b>Stata Center</b><br>Building 32<br>Computer Science and AI Lab')
+                .addTo(map);
+            
+            // Transportation
+            L.marker([42.3622, -71.0864], {icon: transportIcon})
+                .bindPopup('<b>Kendall/MIT Station</b><br>MBTA Red Line<br>Main public transit access')
+                .addTo(map);
+            
+            // Dining Options
+            L.marker([42.3605, -71.0935], {icon: diningIcon})
+                .bindPopup('<b>Lobdell Food Court</b><br>Building W20<br>Various dining options')
+                .addTo(map);
+            
+            L.marker([42.3615, -71.0968], {icon: diningIcon})
+                .bindPopup('<b>Next House Dining</b><br>Building W71<br>Campus dining hall')
+                .addTo(map);
+            
+            // Nearby Hotels
+            L.marker([42.3665, -71.1028], {icon: accommodationIcon})
+                .bindPopup('<b>Le Meridien Cambridge</b><br>20 Sidney Street<br>Luxury hotel near MIT')
+                .addTo(map);
+            
+            L.marker([42.3679, -71.1166], {icon: accommodationIcon})
+                .bindPopup('<b>Hotel Marlowe</b><br>25 Edwin H Land Blvd<br>Boutique hotel in Kendall Square')
+                .addTo(map);
+            
+            L.marker([42.3736, -71.1186], {icon: accommodationIcon})
+                .bindPopup('<b>Residence Inn Cambridge</b><br>6 Cambridge Center<br>Extended stay hotel')
+                .addTo(map);
+            
+            // More Points of Interest
+            L.marker([42.3590, -71.0935], {icon: generalIcon})
+                .bindPopup('<b>MIT Libraries</b><br>Barker Engineering Library<br>Research resources')
+                .addTo(map);
+            
+            L.marker([42.3581, -71.0913], {icon: generalIcon})
+                .bindPopup('<b>MIT Museum</b><br>Building N52<br>Science and technology exhibits')
+                .addTo(map);
+        });
+    </script>
+</body>
+</html>

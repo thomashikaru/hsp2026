@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Deadlines - HSP 2026 Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .deadlines-hero {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .deadlines-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .deadlines-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .deadlines-section {
+            padding: 80px 0;
+        }
+
+        .deadline-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #059669;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .deadline-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .deadline-card.urgent {
+            border-left-color: #dc2626;
+        }
+
+        .deadline-card.upcoming {
+            border-left-color: #d97706;
+        }
+
+        .deadline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .deadline-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .deadline-date {
+            background: #f3f4f6;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .deadline-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .deadline-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .status-urgent {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .status-upcoming {
+            background: #fffbeb;
+            color: #d97706;
+        }
+
+        .status-completed {
+            background: #f0fdf4;
+            color: #059669;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .deadlines-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .deadline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HSP 2026</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="deadlines.html" class="nav-link">Deadlines</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="map.html" class="nav-link">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="deadlines-hero">
+            <div class="container">
+                <h1>Important Deadlines</h1>
+                <p>Stay on track with all the key dates for HSP 2026 Conference</p>
+            </div>
+        </section>
+
+        <section class="deadlines-section">
+            <div class="container">
+                <div class="timeline">
+                    <div class="deadline-card urgent">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Abstract Submission Deadline</h3>
+                            <span class="deadline-date">January 15, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            Submit your research abstracts for consideration in the conference program. 
+                            All submissions must be in PDF format and follow the provided template.
+                        </p>
+                        <span class="deadline-status status-urgent">Urgent - Due Soon</span>
+                    </div>
+
+                    <div class="deadline-card upcoming">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Early Bird Registration</h3>
+                            <span class="deadline-date">February 28, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            Register early to secure the best rates for conference attendance. 
+                            Early bird pricing includes access to all sessions and workshops.
+                        </p>
+                        <span class="deadline-status status-upcoming">Upcoming</span>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Notification of Acceptance</h3>
+                            <span class="deadline-date">March 15, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            Authors will be notified of abstract acceptance and presentation format 
+                            (oral presentation, poster, or workshop).
+                        </p>
+                        <span class="deadline-status status-upcoming">Upcoming</span>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Final Paper Submission</h3>
+                            <span class="deadline-date">April 30, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            Submit final papers for inclusion in the conference proceedings. 
+                            Papers must be formatted according to the conference guidelines.
+                        </p>
+                        <span class="deadline-status status-upcoming">Upcoming</span>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Regular Registration Deadline</h3>
+                            <span class="deadline-date">May 31, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            Final deadline for conference registration. Late registration may incur 
+                            additional fees and limited availability.
+                        </p>
+                        <span class="deadline-status status-upcoming">Upcoming</span>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-header">
+                            <h3 class="deadline-title">Conference Begins</h3>
+                            <span class="deadline-date">June 15, 2026</span>
+                        </div>
+                        <p class="deadline-description">
+                            The HSP 2026 Conference officially begins with opening ceremonies 
+                            and keynote presentations.
+                        </p>
+                        <span class="deadline-status status-upcoming">Upcoming</span>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3>Need Help?</h3>
+                    <p>If you have questions about any deadlines or need assistance with submissions, please contact us.</p>
+                    <a href="faq.html" class="btn btn-primary">View FAQ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HSP 2026 Conference</h3>
+                    <p>Advancing the field of human systems performance through collaboration and innovation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="deadlines.html">Important Deadlines</a></li>
+                        <li><a href="schedule.html">Conference Schedule</a></li>
+                        <li><a href="map.html">Campus Map</a></li>
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <span class="contact-email">info@hsp2026.org</span></p>
+                    <p>Phone: <span class="contact-phone">+1 (555) 123-4567</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HSP Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
