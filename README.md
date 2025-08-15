@@ -2,6 +2,8 @@
 
 A beautiful, minimalist conference website built with modern web technologies. This website is designed to be easily customizable and extendable for your conference needs.
 
+🌐 **Live Website:** https://hsp2026.org
+
 ## Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
