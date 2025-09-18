@@ -3,7 +3,7 @@ console.log('Config.js loaded');
 
 window.WEBSITE_CONFIG = {
     // Set to false to disable under construction mode and show all content
-    UNDER_CONSTRUCTION_MODE: false,
+    UNDER_CONSTRUCTION_MODE: true,
     
     // Conference Details
     conferenceName: "39th Annual Conference on Human Sentence Processing",
@@ -314,11 +314,19 @@ window.WEBSITE_CONFIG = {
         venues: [
             {
                 id: "main-venue",
-                name: "Building 10 - Main Auditorium",
+                name: "MIT Building 10 - Main Auditorium (10-250)",
                 type: "main",
                 coordinates: [42.3598, -71.0921],
                 description: "Room 10-250<br>Main conference venue",
-                address: "Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139"
+                address: "MIT Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139"
+            },
+            {
+                id: "poster-venue",
+                name: "MIT Building 46 - Atrium",
+                type: "main",
+                coordinates: [42.3619,-71.0919],
+                description: "Building 46 atrium<br>Poster session venue",
+                address: "MIT Building 46, 43 Vassar St, Cambridge, MA 02139"
             }
         ],
         accommodation: [
@@ -326,28 +334,92 @@ window.WEBSITE_CONFIG = {
                 id: "le-meridien",
                 name: "Le Meridien Cambridge",
                 type: "accommodation",
-                coordinates: [42.3665, -71.1028],
+                coordinates: [42.362114,-71.1002086],
                 description: "20 Sidney Street<br>Luxury hotel near MIT",
                 address: "20 Sidney Street, Cambridge, MA 02139"
             },
             {
                 id: "residence-inn",
-                name: "Residence Inn Cambridge",
+                name: "Residence Inn by Marriott Boston Cambridge",
                 type: "accommodation",
-                coordinates: [42.3736, -71.1186],
+                coordinates: [42.3642703,-71.088053],
                 description: "6 Cambridge Center<br>Extended stay hotel",
                 address: "6 Cambridge Center, Cambridge, MA 02142"
-            }
+            },
+            {
+                id: "mariott-cambridge",
+                name: "Boston Marriott Cambridge",
+                type: "accommodation",
+                coordinates: [42.3633289,-71.0866161],
+                description: "3-star hotel",
+                address: "50 Broadway, Cambridge, MA 02142"
+            },
+            {
+                id: "marlowe",
+                name: "Kimpton Marlowe Hotel",
+                type: "accommodation",
+                coordinates: [42.3678508,-71.0750888],
+                description: "4-star hotel",
+                address: "25 Edwin H Land Blvd, Cambridge, MA 02141"
+            },
+            {
+                id: "sonesta",
+                name: "The Royal Sonesta Boston",
+                type: "accommodation",
+                coordinates: [42.3667767,-71.0751351],
+                description: "4-star hotel",
+                address: "40 Edwin H Land Blvd, Cambridge, MA 02142"
+            },
         ],
         dining: [
             {
-                id: "lobdell",
-                name: "Lobdell Food Court",
+                id: "stratton",
+                name: "Stratton Student Center",
                 type: "dining",
-                coordinates: [42.3605, -71.0935],
-                description: "Building W20<br>Various dining options",
+                coordinates: [42.3590265, -71.0947],
+                description: "Building W20<br>Various dining options ($)",
                 address: "84 Massachusetts Avenue, Cambridge, MA 02139"
-            }
+            },
+            {
+                id: "chipotle",
+                name: "Chipotle",
+                type: "dining",
+                coordinates: [42.3625961,-71.0858837],
+                description: "Mexican, fast food ($)",
+                address: "255 Main St, Cambridge, MA 02142"
+            },
+            {
+                id: "a4",
+                name: "Area Four",
+                type: "dining",
+                coordinates: [42.3632224,-71.0928356],
+                description: "Café ($) and Pizza ($$)",
+                address: "500 Technology Square, Cambridge, MA 02139"
+            },
+            {
+                id: "cava",
+                name: "CAVA",
+                type: "dining",
+                coordinates: [42.3631727,-71.0880154],
+                description: "Mediterranean, fast food ($)",
+                address: "82 Ames St, Cambridge, MA 02142"
+            },
+            {
+                id: "life-alive",
+                name: "Life Alive Organic Cafe Kendall Square",
+                type: "dining",
+                coordinates: [42.3630085,-71.0884855],
+                description: "Vegetarian ($)",
+                address: "415 Main St, Ames St Side, Cambridge, MA 02142"
+            },
+            {
+                id: "flour",
+                name: "Flour Bakery",
+                type: "dining",
+                coordinates: [42.3609644,-71.0966249],
+                description: "Sandwich ($)",
+                address: "190 Massachusetts Ave, Cambridge, MA 02139"
+            },
         ],
         transport: [
             {
@@ -364,16 +436,16 @@ window.WEBSITE_CONFIG = {
                 id: "stata-center",
                 name: "Stata Center",
                 type: "general",
-                coordinates: [42.3584, -71.0906],
-                description: "Building 32<br>Computer Science and AI Lab",
+                coordinates: [42.3617, -71.0933],
+                description: "MIT Building 32<br>Stata Center",
                 address: "32 Vassar Street, Cambridge, MA 02139"
             },
             {
                 id: "mit-museum",
                 name: "MIT Museum",
                 type: "general",
-                coordinates: [42.3581, -71.0913],
-                description: "Building N52<br>Science and technology exhibits",
+                coordinates: [42.3621, -71.0867],
+                description: "MIT Building N52<br>Science and technology exhibits",
                 address: "265 Massachusetts Avenue, Cambridge, MA 02139"
             }
         ]

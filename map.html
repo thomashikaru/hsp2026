@@ -16,7 +16,7 @@
     
     <style>
         .map-hero {
-            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            background: linear-gradient(135deg, #002896 0%, #1966ff 100%);
             padding: 120px 0 80px;
             text-align: center;
             color: white;
@@ -101,19 +101,19 @@
         }
 
         .location-card.main-venue {
-            border-left-color: #dc2626;
+            border-left-color: #750014;
         }
 
         .location-card.accommodation {
-            border-left-color: #7c3aed;
+            border-left-color: #3e006b;
         }
 
         .location-card.dining {
-            border-left-color: #059669;
+            border-left-color: #ffeb00;
         }
 
         .location-card.transport {
-            border-left-color: #d97706;
+            border-left-color: #00ad00;
         }
 
         .location-title {
@@ -175,19 +175,19 @@
         }
 
         .legend-color.main {
-            background: #dc2626;
+            background: #750014;
         }
 
         .legend-color.accommodation {
-            background: #7c3aed;
+            background: #3e006b;
         }
 
         .legend-color.dining {
-            background: #059669;
+            background: #ffeb00;
         }
 
         .legend-color.transport {
-            background: #d97706;
+            background: #00ad00;
         }
 
         .legend-color.general {
@@ -224,7 +224,7 @@
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="deadlines.html" class="nav-link">Deadlines</a>
+                    <a href="deadlines.html" class="nav-link">Call for papers</a>
                 </li>
                 <li class="nav-item">
                     <a href="schedule.html" class="nav-link">Schedule</a>
@@ -251,6 +251,13 @@
                 <p>Navigate MIT Campus and find all conference venues and important locations</p>
             </div>
         </section>
+
+        <div class="container" style="display: flex; justify-content: center; align-items: center; margin: 2rem auto;">
+            <div class="highlight-card" style="max-width: 500px; text-align: center; margin: 0 auto;">
+                <h3>MIT Campus Information</h3>
+                <p>For more details on buildings and locations at MIT, visit <a href="https://whereis.mit.edu" class="btn btn-secondary">whereis.mit.edu</a></p>
+            </div>
+        </div>
 
         <section class="map-section">
             <div class="container">
@@ -294,7 +301,7 @@
                     </div>
                 </div>
 
-                <div class="map-info">
+                <div class="map-info" style="display: flex; flex-direction: column; gap: 1rem;">
                     <div class="location-card main-venue">
                         <h3 class="location-title">
                             <span class="location-icon">🏛️</span>
@@ -303,7 +310,18 @@
                         <p class="location-description">
                             Building 10 houses the main auditorium (10-250) where keynote presentations and major sessions will take place.
                         </p>
-                        <p class="location-address">Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139</p>
+                        <p class="location-address">MIT Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139</p>
+                    </div>
+
+                    <div class="location-card main-venue">
+                        <h3 class="location-title">
+                            <span class="location-icon">🏛️</span>
+                            Poster Session Venue
+                        </h3>
+                        <p class="location-description">
+                            The poster sessions will take place in the atrium of Building 46 (MIT Department of Brain and Cognitive Sciences).
+                        </p>
+                        <p class="location-address">MIT Building 46, 43 Vassar St, Cambridge, MA 02139</p>
                     </div>
 
                     <div class="location-card accommodation">
@@ -312,9 +330,17 @@
                             Nearby Hotels
                         </h3>
                         <p class="location-description">
-                            Several recommended hotels within walking distance or short transit to MIT campus.
+                            We do not provide accomodations for HSP 2026. However, we have suggested a number of hotels in the Kendall/MIT area.
                         </p>
-                        <p class="location-address">Various locations in Cambridge and Boston</p>
+                        <ul class="hotel-list" style="padding-left: 40px;">
+                            <li>Le Meridien Cambridge (4-star hotel) <p class="location-address">20 Sidney Street, Cambridge, MA 02139</p></li>
+                            <li>Residence Inn by Marriott (3-star hotel) <p class="location-address">6 Cambridge Center, Cambridge, MA 02142</p></li>
+                            <li>Boston Marriott Cambridge (3-star hotel) <p class="location-address">50 Broadway, Cambridge, MA 02142</p></li>
+                            <li>Kimpton Marlowe Hotel (4-star hotel) <p class="location-address">25 Edwin H Land Blvd, Cambridge, MA 02141</p></li>
+                            <li>The Royal Sonesta Boston (4-star hotel) <p class="location-address">40 Edwin H Land Blvd, Cambridge, MA 02142</p></li>
+                        </ul>
+                        <p>
+                        </p>
                     </div>
 
                     <div class="location-card dining">
@@ -323,9 +349,21 @@
                             Dining Options
                         </h3>
                         <p class="location-description">
-                            Campus dining halls, cafes, and nearby restaurants for meals and coffee breaks.
+                            Below are a list of restautants close to MIT. Some of them are suitable for a quick bite, and others are good for a long sit-down dinner.
                         </p>
-                        <p class="location-address">Multiple locations on and around campus</p>
+                        <ul class="restaurant-list" style="padding-left: 40px;">
+                            <li>Stratton Student Center (~$10-20 a person) <p class="location-address">84 Massachusetts Avenue, Cambridge, MA 02139</p></li>
+                            <li>Chipotle (~$10 a person, Mexican) <p class="location-address">255 Main St, Cambridge, MA 02142</p></li>
+                            <li>Area four (~$5-10 a person in their café, ~$20 a person in their restautant) 
+                                <p class="location-address">500 Technology Square, Cambridge, MA 02139</p></li>
+                            <li>CAVA (~$10 a person, Mediterranean) <p class="location-address">82 Ames St, Cambridge, MA 02142</p></li>
+                            <li>Life Alive Organic Cafe Kendall Square (~$10-15 a person, vegetarian restaurant)
+                                 <p class="location-address">415 Main St, Ames St Side, Cambridge, MA 02142</p></li>
+                            <li>Flour Bakery ($10-15 a person, coffee, pastry, and sandwich) <p class="location-address">190 Massachusetts Ave, Cambridge, MA 02139</p></li>
+                            <li>VESTER Cambridge ($10-15 a person, café) <p class="location-address">73 Ames St, Cambridge, MA 02142</p></li>
+                            <li>Sulmona ($30-50 a person, Italian) <p class='location-address'>608 Main St, Cambridge, MA 02139</p></li>
+                            <li>Mae Asian Eatery ($20-30 a person, Thai) <p class='location-address'>781 Main St, Cambridge, MA 02139</p></li>
+                        </ul>
                     </div>
 
                     <div class="location-card transport">
@@ -334,9 +372,24 @@
                             Transportation
                         </h3>
                         <p class="location-description">
-                            MBTA Red Line station (Kendall/MIT) and other transportation options to reach the campus.
+                            The cloest rapid transit to MIT is the Kendall/MIT MBTA station. There are several options to travel from the Logan Airport to the MIT area.
+
+                            <ul class="transit-options" style="padding-left: 40px;">
+                                <li><b>Rideshare App (Recommended in general, ~20 minutes, $20-30 depending on the exact destination)</b>
+                                    <ul class="transit-descriptions" style="padding-left: 40px">
+                                        <li>Follow the "Ride App" sign at the airport and go to the rideshare pickup area in the central parking garage.</li>
+                                    </ul>
+                                </li>
+                                <li><b>MBTA Silver Line + Red Line (Recommended if your accomodation is close to an MBTA station, ~45 minutes, $2.40):</b>
+                                    <ul class="transit-descriptions" style="padding-left: 40px">
+                                        <li>Take the free Silver Line SL1 bus from any Logan terminal (arrival floor)</li>
+                                        <li>Get off at South Station</li>
+                                        <li>Transfer to the Red Line towards Alewife</li>
+                                        <li>Get off at Kendall/MIT station</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </p>
-                        <p class="location-address">Kendall/MIT Station, Main Street, Cambridge, MA</p>
                     </div>
                 </div>
             </div>
@@ -429,28 +482,28 @@
             // Custom icons for different location types
             const mainVenueIcon = L.divIcon({
                 className: 'custom-marker main-venue-marker',
-                html: '<div style="background: #dc2626; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                html: '<div style="background: #750014; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
                 iconSize: [26, 26],
                 iconAnchor: [13, 13]
             });
             
             const accommodationIcon = L.divIcon({
                 className: 'custom-marker accommodation-marker',
-                html: '<div style="background: #7c3aed; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                html: '<div style="background: #3e006b; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
                 iconSize: [20, 20],
                 iconAnchor: [10, 10]
             });
             
             const diningIcon = L.divIcon({
                 className: 'custom-marker dining-marker',
-                html: '<div style="background: #059669; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                html: '<div style="background: #ffeb00; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
                 iconSize: [20, 20],
                 iconAnchor: [10, 10]
             });
             
             const transportIcon = L.divIcon({
                 className: 'custom-marker transport-marker',
-                html: '<div style="background: #d97706; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+                html: '<div style="background: #00ad00; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
                 iconSize: [20, 20],
                 iconAnchor: [10, 10]
             });
