@@ -151,12 +151,12 @@ Example new page structure:
 ### Color Scheme
 
 The website uses a modern color palette:
-- Primary Blue: `#2563eb`
-- Success Green: `#059669`
+- MIT Red: `#750014`
+- Success Green: `#00ad00`
 - Warning Orange: `#f59e0b`
 - Error Red: `#dc2626`
-- Purple: `#7c3aed`
-- Neutral Grays: `#1f2937`, `#6b7280`, `#9ca3af`
+- Purple: `#750062`
+- Neutral Grays: `#8b959e`, `#6b7280`, `#9ca3af`
 
 ## Deployment
 

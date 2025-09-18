@@ -3,13 +3,13 @@ console.log('Config.js loaded');
 
 window.WEBSITE_CONFIG = {
     // Set to false to disable under construction mode and show all content
-    UNDER_CONSTRUCTION_MODE: true,
+    UNDER_CONSTRUCTION_MODE: false,
     
     // Conference Details
-    conferenceName: "HSP 2026 Conference",
-    conferenceTagline: "The Annual Human Sentence Processing Conference",
+    conferenceName: "39th Annual Conference on Human Sentence Processing",
+    conferenceTagline: "",
     conferenceDate: "March 26-28, 2026",
-    conferenceLocation: "MIT Campus, Cambridge, MA",
+    conferenceLocation: "MIT, Cambridge, MA",
     conferenceTheme: "Language and Thought in Minds and Machines",
     
     // Contact Information
@@ -27,41 +27,41 @@ window.WEBSITE_CONFIG = {
             status: "urgent",
             type: "submission"
         },
-        {
-            title: "Early Bird Registration",
-            date: "January 28, 2026",
-            description: "Register early to secure the best rates for conference attendance. Early bird pricing includes access to all sessions and workshops.",
-            status: "upcoming",
-            type: "registration"
-        },
-        {
-            title: "Notification of Acceptance",
-            date: "January 21, 2026",
-            description: "Authors will be notified of abstract acceptance and presentation format (oral presentation, poster, or workshop).",
-            status: "upcoming",
-            type: "notification"
-        },
-        {
-            title: "Final Paper Submission",
-            date: "March 15, 2026",
-            description: "Submit final papers for inclusion in the conference proceedings. Papers must be formatted according to the conference guidelines.",
-            status: "upcoming",
-            type: "submission"
-        },
-        {
-            title: "Regular Registration Deadline",
-            date: "March 15, 2026",
-            description: "Final deadline for conference registration. Late registration may incur additional fees and limited availability.",
-            status: "upcoming",
-            type: "registration"
-        },
-        {
-            title: "Conference Begins",
-            date: "March 26, 2026",
-            description: "The HSP 2026 Conference officially begins with opening ceremonies and keynote presentations.",
-            status: "upcoming",
-            type: "event"
-        }
+        // {
+        //     title: "Early Bird Registration",
+        //     date: "January 28, 2026", 
+        //     description: "Register early to secure the best rates for conference attendance. Early bird pricing includes access to all sessions and workshops.",
+        //     status: "upcoming",
+        //     type: "registration"
+        // },
+        // {
+        //     title: "Notification of Acceptance",
+        //     date: "January 21, 2026",
+        //     description: "Authors will be notified of abstract acceptance and presentation format (oral presentation, poster, or workshop).",
+        //     status: "upcoming", 
+        //     type: "notification"
+        // },
+        // {
+        //     title: "Final Paper Submission",
+        //     date: "March 15, 2026",
+        //     description: "Submit final papers for inclusion in the conference proceedings. Papers must be formatted according to the conference guidelines.",
+        //     status: "upcoming",
+        //     type: "submission"
+        // },
+        // {
+        //     title: "Regular Registration Deadline",
+        //     date: "March 15, 2026",
+        //     description: "Final deadline for conference registration. Late registration may incur additional fees and limited availability.",
+        //     status: "upcoming",
+        //     type: "registration"
+        // },
+        // {
+        //     title: "Conference Begins",
+        //     date: "March 26, 2026",
+        //     description: "The HSP 2026 Conference officially begins with opening ceremonies and keynote presentations.",
+        //     status: "upcoming",
+        //     type: "event"
+        // }
     ],
     
     // Conference Schedule
