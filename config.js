@@ -392,9 +392,17 @@ window.WEBSITE_CONFIG = {
                 id: "a4",
                 name: "Area Four",
                 type: "dining",
-                coordinates: [42.3632224,-71.0928356],
+                coordinates: [42.3631687,-71.092229],
                 description: "Café ($) and Pizza ($$)",
                 address: "500 Technology Square, Cambridge, MA 02139"
+            },
+            {
+                id: "al",
+                name: "Al's Tech Square Cafe",
+                type: "dining",
+                coordinates: [42.3630859,-71.0933843],
+                description: "Sandwich ($)",
+                address: "600 Technology Square, Cambridge, MA 02139"
             },
             {
                 id: "cava",
@@ -413,12 +421,108 @@ window.WEBSITE_CONFIG = {
                 address: "415 Main St, Ames St Side, Cambridge, MA 02142"
             },
             {
+                id: "vester",
+                name: "VESTER Cambridge",
+                type: "dining",
+                coordinates: [42.3631672,-71.0883456],
+                description: "Vegetarian ($)",
+                address: "73 Ames St, Cambridge, MA 02142"
+            },
+            {
                 id: "flour",
                 name: "Flour Bakery",
                 type: "dining",
                 coordinates: [42.3609644,-71.0966249],
                 description: "Sandwich ($)",
                 address: "190 Massachusetts Ave, Cambridge, MA 02139"
+            },
+            {
+                id: "beantown",
+                name: "Beantown Taqueria",
+                type: "dining",
+                coordinates: [42.3617144,-71.0972965],
+                description: "Mexican ($)",
+                address: "245 Massachusetts Ave, Cambridge, MA 02139"
+            },
+            {
+                id: "muku",
+                name: "Muku Ramen",
+                type: "dining",
+                coordinates: [42.3636457,-71.100258],
+                description: "Japanese ($$)",
+                address: "411 Massachusetts Ave Retail #5, Cambridge, MA 02139"
+            },
+            {
+                id: "tatte",
+                name: "Tatte Bakery & Cafe",
+                type: "dining",
+                coordinates: [42.3649188,-71.0827067],
+                description: "Café ($)",
+                address: "318 Third St, Cambridge, MA 02142"
+            },
+            {
+                id: "cafe-luna",
+                name: "Cafe Luna",
+                type: "dining",
+                coordinates: [42.3629198,-71.0942588],
+                description: "Brunch ($$)",
+                address: "612 Main St, Cambridge, MA 02139"
+            },
+            {
+                id: "mae",
+                name: "Mae Asian Eatery",
+                type: "dining",
+                coordinates: [42.3633755,-71.0968896],
+                description: "Thai ($$)",
+                address: "781 Main St, Cambridge, MA 02139"
+            },
+            {
+                id: "desfina",
+                name: "Desfina Restautant",
+                type: "dining",
+                coordinates: [42.3675399,-71.0811589],
+                description: "Greek ($$)",
+                address: "202 Third St, Cambridge, MA 02141"
+            },
+            {
+                id: "sulmona",
+                name: "Sulmona",
+                type: "dining",
+                coordinates: [42.3628401,-71.0938463],
+                description: "Italian ($$$)",
+                address: "608 Main St, Cambridge, MA 02139"
+            },
+            {
+                id: "amelias",
+                name: "Amelia's Trattoria",
+                type: "dining",
+                coordinates: [42.3650089,-71.0927982],
+                description: "Italian ($$$)",
+                address: "111 Harvard St, Cambridge, MA 02139"
+            },
+            {
+                id: "sumiao",
+                name: "Sumiao Hunan Kitchen",
+                type: "dining",
+                coordinates: [42.3659917,-71.0821242],
+                description: "Chinese ($$$)",
+                address: "270 Third St, Cambridge, MA 02142"
+            },
+            {
+                id: "toscanini",
+                name: "Toscanini's ice cream",
+                type: "dining",
+                coordinates: [42.3636316,-71.0995304],
+                description: "Ice cream ($)",
+                address: "899 Main St, Cambridge, MA 02139"
+            },
+            {
+                id: "caralyst",
+                name: "Caralyst Restaurant",
+                type: "dining",
+                coordinates: [42.3630539,-71.0917155],
+                description: "American ($$$)",
+                address: "300 Technology Square, Cambridge, MA 02139"
             },
         ],
         transport: [
@@ -429,6 +533,22 @@ window.WEBSITE_CONFIG = {
                 coordinates: [42.3622, -71.0864],
                 description: "MBTA Red Line<br>Main public transit access",
                 address: "Main Street, Cambridge, MA 02142"
+            },
+            {
+                id: "south-station",
+                name: "South Station",
+                type: "transport",
+                coordinates: [42.3520027,-71.0552398],
+                description: "MBTA silver line SL1 departs from the airport and stops at South Station. To continue to MIT, take the Red Line towards Alewife and get off at Kendall/MIT station.",
+                address: "20 Sidney Street, Cambridge, MA 02139"
+            },
+            {
+                id: "logan-airport",
+                name: "Logan Airport",
+                type: "transport",
+                coordinates: [42.367144,-71.0215091],
+                description: "To continue to MIT, take the MBTA silver line SL1 to South Station and then take the Red Line towards Alewife and get off at Kendall/MIT station.",
+                address: "Logan International Airport, Boston, MA 02128"
             }
         ],
         pointsOfInterest: [
