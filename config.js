@@ -3,8 +3,12 @@ console.log('Config.js loaded');
 
 window.WEBSITE_CONFIG = {
     // Set to false to disable under construction mode and show all content
-    UNDER_CONSTRUCTION_MODE: true,
-    
+    index_under_construction: false, // should never be true
+    call_for_papers_under_construction: true, // almost ready to release!
+    schedule_under_construction: true, // should stay false until schedule is finalized
+    venue_under_construction: true,
+    faq_under_construction: true,
+
     // Conference Details
     conferenceName: "39th Annual Conference on Human Sentence Processing",
     conferenceTagline: "",

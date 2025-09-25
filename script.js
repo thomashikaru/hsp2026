@@ -71,23 +71,28 @@ console.log('Script.js loaded - starting construction overlay check');
 function createUnderConstructionOverlay() {
     console.log('createUnderConstructionOverlay function called');
     
-    // Check if construction mode is enabled in config
-    const constructionEnabled = window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.UNDER_CONSTRUCTION_MODE;
-    
-    // Debug logging
-    console.log('Construction mode enabled:', constructionEnabled);
-    console.log('Current pathname:', window.location.pathname);
-    console.log('Is home page:', window.location.pathname.endsWith('index.html') || 
-        window.location.pathname.endsWith('/') || 
-        window.location.pathname === '');
-    
-    // Don't show overlay if construction mode is disabled or on home page
-    if (!constructionEnabled || 
-        window.location.pathname.endsWith('index.html') || 
+    if (window.location.pathname.endsWith('index.html') || 
         window.location.pathname.endsWith('/') || 
         window.location.pathname === '') {
-        console.log('Not showing overlay - construction disabled or home page');
-        return;
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.index_under_construction === false) {
+            return;
+        }
+    } else if (window.location.pathname.endsWith('deadlines.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.call_for_papers_under_construction === false) {
+            return;
+        }
+    } else if (window.location.pathname.endsWith('schedule.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.schedule_under_construction === false) {
+            return;
+        }
+    } else if (window.location.pathname.endsWith('map.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.venue_under_construction === false) {
+            return;
+        }
+    } else if (window.location.pathname.endsWith('faq.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.faq_under_construction === false) {
+            return;
+        }
     }
     
     console.log('Creating under construction overlay');
