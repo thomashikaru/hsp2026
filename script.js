@@ -89,6 +89,10 @@ function createUnderConstructionOverlay() {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.venue_under_construction === false) {
             return;
         }
+    } else if (window.location.pathname.endsWith('conduct.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.conduct_under_construction === false) {
+            return;
+        }
     } else if (window.location.pathname.endsWith('faq.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.faq_under_construction === false) {
             return;

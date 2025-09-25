@@ -7,6 +7,7 @@ window.WEBSITE_CONFIG = {
     call_for_papers_under_construction: false, // almost ready to release!
     schedule_under_construction: true, // should stay false until schedule is finalized
     venue_under_construction: false,
+    conduct_under_construction: true,
     faq_under_construction: true,
 
     // Conference Details
