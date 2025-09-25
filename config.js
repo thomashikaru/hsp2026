@@ -6,7 +6,7 @@ window.WEBSITE_CONFIG = {
     index_under_construction: false, // should never be true
     call_for_papers_under_construction: true, // almost ready to release!
     schedule_under_construction: true, // should stay false until schedule is finalized
-    venue_under_construction: true,
+    venue_under_construction: false,
     faq_under_construction: true,
 
     // Conference Details
@@ -26,7 +26,7 @@ window.WEBSITE_CONFIG = {
     deadlines: [
         {
             title: "Abstract Submission Deadline",
-            date: "December 1, 2025",
+            date: "December 12, 2025 [NO extensions]",
             description: "Submit your research abstracts for consideration in the conference program. All submissions must be in PDF format and follow the provided template.",
             status: "urgent",
             type: "submission"
@@ -401,6 +401,14 @@ window.WEBSITE_CONFIG = {
                 address: "500 Technology Square, Cambridge, MA 02139"
             },
             {
+                id: "blue-bottle",
+                name: "Blue Bottle Coffee",
+                type: "dining",
+                coordinates: [42.3632595,-71.0878557],
+                description: "Coffee ($)",
+                address: "88 Ames St, Cambridge, MA 02142"
+            },
+            {
                 id: "al",
                 name: "Al's Tech Square Cafe",
                 type: "dining",
@@ -513,6 +521,14 @@ window.WEBSITE_CONFIG = {
                 address: "270 Third St, Cambridge, MA 02142"
             },
             {
+                id: "alive-and-kicking",
+                name: "Alive and Kicking Lobsters",
+                type: "dining",
+                coordinates: [42.3626829,-71.1141081],
+                description: "Seafood ($$$)",
+                address: "269 Putnam Ave, Cambridge, MA 02139"
+            },
+            {
                 id: "toscanini",
                 name: "Toscanini's ice cream",
                 type: "dining",
@@ -525,8 +541,16 @@ window.WEBSITE_CONFIG = {
                 name: "Caralyst Restaurant",
                 type: "dining",
                 coordinates: [42.3630539,-71.0917155],
-                description: "American ($$$)",
+                description: "American ($$$$)",
                 address: "300 Technology Square, Cambridge, MA 02139"
+            },
+            {
+                id: "oleana",
+                name: "Oleana",
+                type: "dining",
+                coordinates: [42.3704785,-71.0972786],
+                description: "Mediterranean ($$$$)",
+                address: "134 Hampshire St, Cambridge, MA 02139"
             },
         ],
         transport: [

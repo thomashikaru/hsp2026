@@ -251,13 +251,6 @@
             </div>
         </section>
 
-        <div class="container" style="display: flex; justify-content: center; align-items: center; margin: 2rem auto;">
-            <div class="highlight-card" style="max-width: 500px; text-align: center; margin: 0 auto;">
-                <h3>🏛️ MIT Campus Information</h3>
-                <p>For more details on buildings and locations at MIT, visit <a href="https://whereis.mit.edu" class="btn btn-secondary">whereis.mit.edu</a></p>
-            </div>
-        </div>
-
         <section class="map-section">
             <div class="container">
                 <div class="map-container">
@@ -301,89 +294,121 @@
                 </div>
 
                 <div class="map-info" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="location-card main-venue">
-                        <h3 class="location-title">
-                            <span class="location-icon">🏛️</span>
-                            Main Conference Venue
-                        </h3>
-                        <p class="location-description">
-                            Building 10 houses the main auditorium (10-250) where keynote presentations and major sessions will take place.
-                        </p>
-                        <p class="location-address">MIT Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139</p>
+                    <div class="location-card main-venue expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🏛️</span>
+                                Main Conference Venue
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                Building 10 houses the main auditorium (10-250) where keynote presentations and major sessions will take place.
+                            </p>
+                            <p class="location-address">MIT Building 10, 77 Massachusetts Avenue, Cambridge, MA 02139</p>
+                        </div>
                     </div>
 
-                    <div class="location-card main-venue">
-                        <h3 class="location-title">
-                            <span class="location-icon">🏛️</span>
-                            Poster Session Venue
-                        </h3>
-                        <p class="location-description">
-                            The poster sessions will take place in the atrium of Building 46 (MIT Department of Brain and Cognitive Sciences).
-                        </p>
-                        <p class="location-address">MIT Building 46, 43 Vassar St, Cambridge, MA 02139</p>
+                    <div class="location-card main-venue expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🏛️</span>
+                                Poster Session Venue
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                The poster sessions will take place in the atrium of Building 46 (MIT Department of Brain and Cognitive Sciences).
+                            </p>
+                            <p class="location-address">MIT Building 46, 43 Vassar St, Cambridge, MA 02139</p>
+                        </div>
                     </div>
 
-                    <div class="location-card accommodation">
-                        <h3 class="location-title">
-                            <span class="location-icon">🏨</span>
-                            Nearby Hotels
-                        </h3>
-                        <p class="location-description">
-                            We do not provide accomodations for HSP 2026. However, we have suggested a number of hotels in the Kendall/MIT area.
-                        </p>
-                        <ul class="hotel-list" style="padding-left: 40px;">
-                            <li>Le Meridien Cambridge (4-star hotel) <p class="location-address">20 Sidney Street, Cambridge, MA 02139</p></li>
-                            <li>The Kendall Hotel (3-star hotel) <p class="location-address">350 Main St, Cambridge, MA 02142</p></li>
-                            <li>Residence Inn by Marriott (3-star hotel) <p class="location-address">6 Cambridge Center, Cambridge, MA 02142</p></li>
-                            <li>Boston Marriott Cambridge (3-star hotel) <p class="location-address">50 Broadway, Cambridge, MA 02142</p></li>
-                            <li>Kimpton Marlowe Hotel (4-star hotel) <p class="location-address">25 Edwin H Land Blvd, Cambridge, MA 02141</p></li>
-                            <li>The Royal Sonesta Boston (4-star hotel) <p class="location-address">40 Edwin H Land Blvd, Cambridge, MA 02142</p></li>
-                        </ul>
-                        <p>
-                        </p>
+                    <div class="location-card accommodation expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🏨</span>
+                                Nearby Hotels
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                We do not provide accomodations for HSP 2026. However, we have suggested a number of hotels in the Kendall/MIT area.
+                            </p>
+                            <ul class="hotel-list" style="padding-left: 40px;">
+                                <li>Le Meridien Cambridge (4-star hotel) <p class="location-address">20 Sidney Street, Cambridge, MA 02139</p></li>
+                                <li>The Kendall Hotel (3-star hotel) <p class="location-address">350 Main St, Cambridge, MA 02142</p></li>
+                                <li>Residence Inn by Marriott (3-star hotel) <p class="location-address">6 Cambridge Center, Cambridge, MA 02142</p></li>
+                                <li>Boston Marriott Cambridge (3-star hotel) <p class="location-address">50 Broadway, Cambridge, MA 02142</p></li>
+                                <li>Kimpton Marlowe Hotel (4-star hotel) <p class="location-address">25 Edwin H Land Blvd, Cambridge, MA 02141</p></li>
+                                <li>The Royal Sonesta Boston (4-star hotel) <p class="location-address">40 Edwin H Land Blvd, Cambridge, MA 02142</p></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="location-card dining">
-                        <h3 class="location-title">
-                            <span class="location-icon">🍽️</span>
-                            Dining Options
-                        </h3>
-                        <p class="location-description">
-                            Below are a list of restautants close to MIT. Some of them are suitable for a quick bite, and others are good for a long sit-down dinner.
-                        </p>
-                        <ul class="restaurant-list" style="padding-left: 40px;">
-                            <li>Area four (~$5-10 a person in their café, ~$20 a person in their restautant; 1min walk) 
-                                <p class="location-address">500 Technology Square, Cambridge, MA 02139</p></li>
-                            <li>Al's Tech Square Cafe (~$10 a person, sandwich, lunch; 3min walk) <p class="location-address">600 Technology Square, Cambridge, MA 02139</p></li>
-                            <li>CAVA (~$10 a person, Mediterranean; 5min walk) <p class="location-address">82 Ames St, Cambridge, MA 02142</p></li>
-                            <li>Chipotle (~$10 a person, Mexican; 7min walk) <p class="location-address">255 Main St, Cambridge, MA 02142</p></li>
-                            <li>Stratton Student Center (~$10-20 a person; 9min walk) <p class="location-address">84 Massachusetts Avenue, Cambridge, MA 02139</p></li>
-                            <li>VESTER Cambridge ($10-15 a person, café; 5min walk) <p class="location-address">73 Ames St, Cambridge, MA 02142</p></li>
-                            <li>Life Alive Organic Cafe Kendall Square (~$10-15 a person, vegetarian restaurant; 5min walk)
-                                 <p class="location-address">415 Main St, Ames St Side, Cambridge, MA 02142</p></li>
-                            <li>Beantown Taqueria (~$10-15 a person, Mexican; 10min walk) <p class="location-address">245 Massachusetts Ave, Cambridge, MA 02139</p></li>  
-                            <li>MUKU ramen ($10-20 a person, Japanese; 10min walk) <p class='location-address'>411 Massachusetts Ave Retail #5, Cambridge, MA 02139</p></li> 
-                            <li>Flour Bakery ($10-15 a person, coffee, pastry, and sandwich; 10min walk) <p class="location-address">190 Massachusetts Ave, Cambridge, MA 02139</p></li>
-                            <li>Tatte Bakery & Cafe ($10-15 a person, café; 13min walk) <p class="location-address">318 Third St, Cambridge, MA 02142</p></li>
-                            <li>Cafe Luna ($20-30 a person, brunch; 5min walk) <p class='location-address'>612 Main St, Cambridge, MA 02139</p></li>
-                            <li>Mae Asian Eatery ($20-30 a person, Thai; 10min walk) <p class='location-address'>781 Main St, Cambridge, MA 02139</p></li>
-                            <li>Desfina Restautant ($20-30 a person, Greek; 18min walk) <p class='location-address'>202 Third St, Cambridge, MA 02141</p></li>
-                            <li>Sulmona ($30-50 a person, Italian; 5min walk) <p class='location-address'>608 Main St, Cambridge, MA 02139</p></li>
-                            <li>Amelia's Trattoria ($30-50 a person, Italian; 5min walk) <p class='location-address'>111 Harvard St, Cambridge, MA 02139</p></li>
-                            <li>Sumiao Hunan Kitchen ($30-50 a person, Chines; 15min walk) <p class='location-address'>270 Third St, Cambridge, MA 02142</p></li>
-                            <li>Caralyst Restaurant ($50+ a person, American, 1min walk) <p class='location-address'>300 Technology Square, Cambridge, MA 02139</p></li>
-                            <li>Toscanini's ice cream ($5-10 a person, ice cream; 15min walk) <p class='location-address'>899 Main St, Cambridge, MA 02139</p></li>
-                        </ul>
+                    <div class="location-card dining expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🍽️</span>
+                                Dining Options
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                Below are a list of restautants close to MIT. Some of them are suitable for a quick bite, and others are good for a long sit-down dinner.
+                            </p>
+                            <ul class="restaurant-list" style="padding-left: 40px;">
+                                <h4 style="margin-bottom: 0.5em;">Coffee</h4>
+                                <li>Area four (~$5-10 a person in their café, ~$20 a person in their restautant; 1min walk) 
+                                    <p class="location-address">500 Technology Square, Cambridge, MA 02139</p></li>
+                                <li>Blue Buttle Coffee ($5-10 a person, coffee, 5min walk) <p class='location-address'>88 Ames St, Cambridge, MA 02142</p></li>
+                                <br>
+                                <h4 style="margin-bottom: 0.5em;">Lunch</h4>
+                                <li>Al's Tech Square Cafe (~$10 a person, sandwich, lunch; 3min walk) <p class="location-address">600 Technology Square, Cambridge, MA 02139</p></li>
+                                <li>CAVA (~$10 a person, Mediterranean; 5min walk) <p class="location-address">82 Ames St, Cambridge, MA 02142</p></li>
+                                <li>Chipotle (~$10 a person, Mexican; 7min walk) <p class="location-address">255 Main St, Cambridge, MA 02142</p></li>
+                                <li>Stratton Student Center (~$10-20 a person; 9min walk) <p class="location-address">84 Massachusetts Avenue, Cambridge, MA 02139</p></li>
+                                <li>VESTER Cambridge ($10-15 a person, café; 5min walk) <p class="location-address">73 Ames St, Cambridge, MA 02142</p></li>
+                                <li>Life Alive Organic Cafe Kendall Square (~$10-15 a person, vegetarian restaurant; 5min walk)
+                                     <p class="location-address">415 Main St, Ames St Side, Cambridge, MA 02142</p></li>
+                                <li>Beantown Taqueria (~$10-15 a person, Mexican; 10min walk) <p class="location-address">245 Massachusetts Ave, Cambridge, MA 02139</p></li>  
+                                <li>MUKU ramen ($10-20 a person, Japanese; 10min walk) <p class='location-address'>411 Massachusetts Ave Retail #5, Cambridge, MA 02139</p></li> 
+                                <li>Flour Bakery ($10-15 a person, coffee, pastry, and sandwich; 10min walk) <p class="location-address">190 Massachusetts Ave, Cambridge, MA 02139</p></li>
+                                <li>Tatte Bakery & Cafe ($10-15 a person, café; 13min walk) <p class="location-address">318 Third St, Cambridge, MA 02142</p></li>
+                                <li>Cafe Luna ($20-30 a person, brunch; 5min walk) <p class='location-address'>612 Main St, Cambridge, MA 02139</p></li>
+                                <br>
+                                <h4 style="margin-bottom: 0.5em;">Dinner</h4>
+                                <li>Mae Asian Eatery ($20-30 a person, Thai; 10min walk) <p class='location-address'>781 Main St, Cambridge, MA 02139</p></li>
+                                <li>Desfina Restautant ($20-30 a person, Greek; 18min walk) <p class='location-address'>202 Third St, Cambridge, MA 02141</p></li>
+                                <li>Sulmona ($30-50 a person, Italian; 5min walk) <p class='location-address'>608 Main St, Cambridge, MA 02139</p></li>
+                                <li>Amelia's Trattoria ($30-50 a person, Italian; 5min walk) <p class='location-address'>111 Harvard St, Cambridge, MA 02139</p></li>
+                                <li>Sumiao Hunan Kitchen ($30-50 a person, Chines; 15min walk) <p class='location-address'>270 Third St, Cambridge, MA 02142</p></li>
+                                <li>Alive and Kicking Lobsters ($30-50 a person, seafood; 30min walk) <p class='location-address'>269 Putnam Ave, Cambridge, MA 02139</p></li>
+                                <li>Caralyst Restaurant ($50+ a person, American, 1min walk) <p class='location-address'>300 Technology Square, Cambridge, MA 02139</p></li>
+                                <li>Oleana ($50+ a person, Mediterranean; 17min walk) <p class='location-address'>134 Hampshire St, Cambridge, MA 02139</p></li>
+                                <br>
+                                <h4 style="margin-bottom: 0.5em;">Ice Cream</h4>
+                                <li>Toscanini's ice cream ($5-10 a person, ice cream; 15min walk) <p class='location-address'>899 Main St, Cambridge, MA 02139</p></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="location-card transport">
-                        <h3 class="location-title">
-                            <span class="location-icon">🚇</span>
-                            Transportation
-                        </h3>
-                        <p class="location-description">
-                            The cloest rapid transit to MIT is the Kendall/MIT MBTA station. There are several options to travel from the Logan Airport to the MIT area.
-
+                    <div class="location-card transport expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🚇</span>
+                                Transportation
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                The cloest rapid transit to MIT is the Kendall/MIT MBTA station. There are several options to travel from the Logan Airport to the MIT area.
+                            </p>
                             <ul class="transit-options" style="padding-left: 40px;">
                                 <li><b>Rideshare App (Recommended in general, ~20 minutes, $20-30 depending on the exact destination)</b>
                                     <ul class="transit-descriptions" style="padding-left: 40px">
@@ -400,26 +425,55 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
-                    <div class="location-card general">
-                        <h3 class="location-title">
-                            <span class="location-icon">🎉</span>
-                            Points of Interest
-                        </h3>
-                        <p class="location-description">
-                            Below are a list of points of interest near MIT.
-                        </p>
-                        <ul class="points-of-interest-list" style="padding-left: 40px;">
-                            <li>Stata Center <p class="location-address">600 Technology Square, Cambridge, MA 02139</p></li>
-                            <li>MIT Museum  <p class="location-address">265 Massachusetts Avenue, Cambridge, MA 02139</p></li>
-                        </ul>
+
+                    <div class="location-card general expandable-card">
+                        <button class="expand-toggle" aria-expanded="false" style="background: transparent; border: none; box-shadow: none; padding: 0; width: 100%; text-align: left;">
+                            <h3 class="location-title">
+                                <span class="location-icon">🎉</span>
+                                Points of Interest
+                                <span class="expand-arrow" aria-hidden="true">▼</span>
+                            </h3>
+                        </button>
+                        <div class="expand-content" style="display: none;">
+                            <p class="location-description">
+                                Below are a list of points of interest near MIT.
+                            </p>
+                            <ul class="points-of-interest-list" style="padding-left: 40px;">
+                                <li>Stata Center <p class="location-address">600 Technology Square, Cambridge, MA 02139</p></li>
+                                <li>MIT Museum  <p class="location-address">265 Massachusetts Avenue, Cambridge, MA 02139</p></li>
+                            </ul>
+                        </div>
                     </div>
+                    <script>
+                        // Expandable card logic
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.querySelectorAll('.expandable-card .expand-toggle').forEach(function(btn) {
+                                btn.addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    var card = btn.closest('.expandable-card');
+                                    var content = card.querySelector('.expand-content');
+                                    var expanded = btn.getAttribute('aria-expanded') === 'true';
+                                    // Toggle only this card (do not collapse others)
+                                    if (!expanded) {
+                                        content.style.display = '';
+                                        btn.setAttribute('aria-expanded', 'true');
+                                        btn.querySelector('.expand-arrow').textContent = '▲';
+                                    } else {
+                                        content.style.display = 'none';
+                                        btn.setAttribute('aria-expanded', 'false');
+                                        btn.querySelector('.expand-arrow').textContent = '▼';
+                                    }
+                                });
+                            });
+                        });
+                    </script>
                 </div>
             </div>
             <div class="container" style="display: flex; justify-content: center; align-items: center; margin: 2rem auto;">
                 <div class="highlight-card" style="max-width: 500px; text-align: center; margin: 0 auto;">
-                    <h3>MIT Campus Information</h3>
+                    <h3>🏛️ MIT Campus Information</h3>
                     <p>For more details on buildings and locations at MIT, please visit the link below. The venue is located in Building 10.</p>
                     <br>
                     <a href="https://whereis.mit.edu" class="btn btn-secondary">whereis.mit.edu</a>
