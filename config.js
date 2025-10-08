@@ -4,7 +4,7 @@ console.log('Config.js loaded');
 window.WEBSITE_CONFIG = {
     // Set to false to disable under construction mode and show all content
     index_under_construction: false, // should never be true
-    call_for_papers_under_construction: false, // almost ready to release!
+    call_for_papers_under_construction: false,
     schedule_under_construction: true, // should stay true until schedule is finalized
     venue_under_construction: false,
     conduct_under_construction: false,
