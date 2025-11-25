@@ -8,7 +8,7 @@ window.WEBSITE_CONFIG = {
     schedule_under_construction: true, // should stay true until schedule is finalized
     venue_under_construction: false,
     conduct_under_construction: false,
-    faq_under_construction: true,
+    faq_under_construction: false,
 
     // Conference Details
     conferenceName: "39th Annual Conference on Human Sentence Processing",
