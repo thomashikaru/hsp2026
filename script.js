@@ -77,15 +77,19 @@ function createUnderConstructionOverlay() {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.index_under_construction === false) {
             return;
         }
-    } else if (window.location.pathname.endsWith('deadlines.html')) {
-        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.call_for_papers_under_construction === false) {
+    } else if (window.location.pathname.endsWith('submissions.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.submissions_under_construction === false) {
+            return;
+        }
+    } else if (window.location.pathname.endsWith('registration.html')) {
+        if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.registration_under_construction === false) {
             return;
         }
     } else if (window.location.pathname.endsWith('schedule.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.schedule_under_construction === false) {
             return;
         }
-    } else if (window.location.pathname.endsWith('map.html')) {
+    } else if (window.location.pathname.endsWith('venue.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.venue_under_construction === false) {
             return;
         }

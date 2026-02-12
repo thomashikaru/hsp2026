@@ -227,14 +227,14 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
 }
 
 .highlight-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.2);
 }
 
 .highlight-icon {

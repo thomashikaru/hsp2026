@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call for Abstracts - HSP 2026</title>
+    <title>Submissions - HSP 2026</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
             border-left: 4px solid #059669;
             transition: all 0.3s ease;
             position: relative;
@@ -46,15 +46,23 @@
 
         .deadline-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 36px rgba(0, 0, 0, 0.2);
         }
 
         .deadline-card.urgent {
             border-left-color: #dc2626;
         }
 
+        .deadline-card.closed {
+            border-left-color: #777777;
+        }
+
         .deadline-card.upcoming {
             border-left-color: #d97706;
+        }
+
+        .deadline-card.open {
+            border-left-color: #059669;
         }
 
         .deadline-header {
@@ -97,12 +105,17 @@
             color: #dc2626;
         }
 
+        .status-closed {
+            background: #eeeeee;
+            color: #777777;
+        }
+
         .status-upcoming {
             background: #fffbeb;
             color: #d97706;
         }
 
-        .status-completed {
+        .status-open {
             background: #f0fdf4;
             color: #059669;
         }
@@ -153,13 +166,16 @@
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="deadlines.html" class="nav-link">Call for Abstracts</a>
+                    <a href="submissions.html" class="nav-link">Submissions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.html" class="nav-link">Registration</a>
                 </li>
                 <li class="nav-item">
                     <a href="schedule.html" class="nav-link">Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a href="map.html" class="nav-link">Venue</a>
+                    <a href="venue.html" class="nav-link">Venue</a>
                 </li>
                 <li class="nav-item">
                     <a href="conduct.html" class="nav-link">Code of Conduct</a>
@@ -179,7 +195,7 @@
     <main>
         <section class="deadlines-hero">
             <div class="container">
-                <h1>Call for Abstracts</h1>
+                <h1>Submissions</h1>
             </div>
         </section>
         <section class="text-block">
@@ -237,23 +253,7 @@
                         </ul>
                     </p>
                     <br>
-                    <h2>Conference registration</h2>
-                    <br>
-                    <p>Please register for the conference <a href="https://app.oxfordabstracts.com/register/event/75992?preview=false">here</a>.</p>
-                    <br>
-                    <p><b>Early registration (closes February 27, 2026)</b></p>
-                    <ul style="padding-left: 20px;">
-                        <li>Student Attendee: $145</li>
-                        <li>Non-Student Attendee: $245</li>
-                    </ul>
-                    <br>
-                    <p><b>Regular registration (closes March 28, 2026)</b></p>
-                    <ul style="padding-left: 20px;">
-                        <li>Student Attendee: $195</li>
-                        <li>Non-Student Attendee: $295</li>
-                    </ul>
-                    <br>
-                    <p><i>All conference attendees are required to register, regardless of whether they are presenting work. Payment is required at the time of registration.</i>
+                    <p><i>All conference attendees are required to register, regardless of whether they are presenting work. Please go <a href="registration.html">here</a> to register. Payment is required at the time of registration.</i>
                     </p>
                 </div>
             </div>
@@ -264,7 +264,7 @@
                 <div class="timeline">
 
 
-                    <div class="deadline-card">
+                    <!-- <div class="deadline-card closed">
                         <div class="deadline-header">
                             <h3 class="deadline-title">Abstract submission opens</h3>
                             <span class="deadline-date">November 7, 2025</span>
@@ -272,10 +272,10 @@
                         <p class="deadline-description">
                             Complete the <a href="https://app.oxfordabstracts.com/stages/79671/submitter">abstract submission form</a> via Oxford Abstracts. Submissions close on December 12, 2025.
                         </p>
-                        <span class="deadline-status status-completed">Currently Open</span>
+                        <span class="deadline-status status-closed">Closed</span>
                     </div>
 
-                    <div class="deadline-card">
+                    <div class="deadline-card open">
                         <div class="deadline-header">
                             <h3 class="deadline-title">Conference registration opens</h3>
                             <span class="deadline-date">November 14, 2025</span>
@@ -283,30 +283,30 @@
                         <p class="deadline-description">
                             Complete the <a href="https://app.oxfordabstracts.com/register/event/75992?preview=false">conference registration form</a> via Oxford Abstracts. All conference attendees are required to register, regardless of whether they are presenting work. Payment is required at the time of registration.
                         </p>
-                        <span class="deadline-status status-completed">Currently Open</span>
-                    </div>
+                        <span class="deadline-status status-open">Currently Open</span>
+                    </div> -->
 
-                    <div class="deadline-card urgent">
+                    <div class="deadline-card closed">
                         <div class="deadline-header">
-                            <h3 class="deadline-title">Abstract submission closes</h3>
+                            <h3 class="deadline-title">Abstract submissions close</h3>
                             <span class="deadline-date">December 12, 2025 (AoE)</span>
                         </div>
                         <p class="deadline-description">
                             Following the abstract specifications above, complete the <a href="https://app.oxfordabstracts.com/stages/79671/submitter">abstract submission form</a> via Oxford Abstracts. <strong>This deadline is final.</strong> We will not have any extensions. 
                         </p>
-                        <span class="deadline-status status-upcoming">Upcoming</span>
+                        <span class="deadline-status status-closed">Completed</span>
                     </div>
 
-                    <div class="deadline-card">
+                    <div class="deadline-card closed">
                         <div class="deadline-header">
-                            <h3 class="deadline-title">Decision released</h3>
+                            <h3 class="deadline-title">Decisions released</h3>
                             <span class="deadline-date">January 23, 2026</span>
                         </div>
                         <p class="deadline-description">
                             Authors will be notified of abstract acceptance and presentation format 
                             (oral presentation, poster, or workshop).
                         </p>
-                        <span class="deadline-status status-upcoming">Upcoming</span>
+                        <span class="deadline-status status-closed">Completed</span>
                     </div>
 
                     <div class="deadline-card urgent">
@@ -317,10 +317,10 @@
                         <p class="deadline-description">
                             Complete the <a href="https://app.oxfordabstracts.com/register/event/75992?preview=false">conference registration form</a> via Oxford Abstracts. Registration prices increase by $50 after this date.
                         </p>
-                        <span class="deadline-status status-upcoming">Upcoming</span>
+                        <span class="deadline-status status-urgent">Closes soon</span>
                     </div>
 
-                    <div class="deadline-card urgent">
+                    <div class="deadline-card upcoming">
                         <div class="deadline-header">
                             <h3 class="deadline-title">Conference registration closes</h3>
                             <span class="deadline-date">March 28, 2026</span>
@@ -408,9 +408,10 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="deadlines.html">Call for Abstracts</a></li>
+                        <li><a href="submissions.html">Submissions</a></li>
+                        <li><a href="registration.html">Registration</a></li>
                         <li><a href="schedule.html">Conference Schedule</a></li>
-                        <li><a href="map.html">Venue</a></li>
+                        <li><a href="venue.html">Venue</a></li>
                         <li><a href="conduct.html">Code of Conduct</a></li>
                         <li><a href="faq.html">Frequently Asked Questions</a></li>
                     </ul>
