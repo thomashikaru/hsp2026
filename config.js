@@ -6,7 +6,7 @@ window.WEBSITE_CONFIG = {
     index_under_construction: false, // should never be true
     submissions_under_construction: false,
     registration_under_construction: false,
-    schedule_under_construction: true, // should stay true until schedule is finalized
+    schedule_under_construction: false, // should stay true until schedule is finalized
     venue_under_construction: false,
     conduct_under_construction: false,
     faq_under_construction: false,

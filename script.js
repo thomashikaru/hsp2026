@@ -71,36 +71,51 @@ console.log('Script.js loaded - starting construction overlay check');
 function createUnderConstructionOverlay() {
     console.log('createUnderConstructionOverlay function called');
     
+    // Check if construction mode should be disabled for this page
+    let shouldShowOverlay = true;
+    
     if (window.location.pathname.endsWith('index.html') || 
         window.location.pathname.endsWith('/') || 
         window.location.pathname === '') {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.index_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('submissions.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.submissions_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('registration.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.registration_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('schedule.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.schedule_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('venue.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.venue_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('conduct.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.conduct_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
     } else if (window.location.pathname.endsWith('faq.html')) {
         if (window.WEBSITE_CONFIG && window.WEBSITE_CONFIG.faq_under_construction === false) {
-            return;
+            shouldShowOverlay = false;
         }
+    }
+    
+    // Remove any existing overlay first
+    const existingOverlay = document.querySelector('.under-construction-overlay');
+    if (existingOverlay) {
+        existingOverlay.remove();
+    }
+    
+    // If construction mode is disabled, don't create overlay
+    if (!shouldShowOverlay) {
+        console.log('Construction mode disabled for this page, not showing overlay');
+        return;
     }
     
     console.log('Creating under construction overlay');
