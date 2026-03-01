@@ -236,16 +236,16 @@
                   "email": "bkrieger@lst.uni-saarland.de"
                 },
                 {
-                  "first_name": "Harm",
-                  "last_name": "Brouwer",
-                  "order": 2,
-                  "email": "h.brouwer@tilburguniversity.edu"
-                },
-                {
                   "first_name": "Matthew W.",
                   "last_name": "Crocker",
-                  "order": 3,
+                  "order": 2,
                   "email": "crocker@lst.uni-saarland.de"
+                },
+                {
+                  "first_name": "Harm",
+                  "last_name": "Brouwer",
+                  "order": 3,
+                  "email": "h.brouwer@tilburguniversity.edu"
                 }
               ]
             },
@@ -361,10 +361,10 @@
                   "email": "naoko@uta.edu"
                 },
                 {
-                  "first_name": "Jeffery",
+                  "first_name": "Jeffrey",
                   "last_name": "Witzel",
                   "order": 3,
-                  "email": "jeffery.witzel@uta.edu"
+                  "email": "jeffrey.witzel@uta.edu"
                 }
               ]
             },
@@ -574,7 +574,7 @@
                 },
                 {
                   "submission_id": 334,
-                  "title": "Effects of Contextual Constraint and Proficiency on L2 Language Processing during Authentic Text Reading",
+                  "title": "Effects of Contextual Constraint and Proficiency on L2 Language Processing during Naturalistic Text Reading",
                   "authors": [
                     {
                       "first_name": "Shuchen",
@@ -656,6 +656,12 @@
                       "last_name": "Herlant",
                       "order": 2,
                       "email": "aherlant@unc.edu"
+                    },
+                    {
+                      "first_name": "James",
+                      "last_name": "Kesan",
+                      "order": 3,
+                      "email": "jkesan@unc.edu"
                     }
                   ],
                   "topic": "Semantics & Pragmatics"
@@ -671,21 +677,15 @@
                       "email": "yun.he@northeastern.edu"
                     },
                     {
-                      "first_name": "Yi-Lun",
-                      "last_name": "Weng",
-                      "order": 2,
-                      "email": "ylweng@udel.edu"
-                    },
-                    {
                       "first_name": "Amanda",
                       "last_name": "Owen Van Horne",
-                      "order": 3,
+                      "order": 2,
                       "email": "ajovh@udel.edu"
                     },
                     {
                       "first_name": "Zhenghan",
                       "last_name": "Qi",
-                      "order": 4,
+                      "order": 3,
                       "email": "z.qi@northeastern.edu"
                     }
                   ],
@@ -775,7 +775,7 @@
                 },
                 {
                   "submission_id": 103,
-                  "title": "Structural Priming for Implausible Sentences is Independent of Interlocutors’ Linguistic Competence: Evidence from Interactive Sentence Production",
+                  "title": "Structural Priming for Implausible Sentences in Interactive Production: The Role of Interlocutors’ Linguistic Competence",
                   "authors": [
                     {
                       "first_name": "Lu",
@@ -883,6 +883,12 @@
                       "last_name": "Lion",
                       "order": 1,
                       "email": "ellal@campus.technion.ac.il"
+                    },
+                    {
+                      "first_name": "Orna",
+                      "last_name": "Peleg",
+                      "order": 2,
+                      "email": "pelegor@tauex.tau.ac.il"
                     }
                   ],
                   "topic": "Phonology & Prosody"
@@ -896,6 +902,12 @@
                       "last_name": "Ku",
                       "order": 1,
                       "email": "lchnku@gmail.com"
+                    },
+                    {
+                      "first_name": "Nicola",
+                      "last_name": "Molinaro",
+                      "order": 2,
+                      "email": "n.molinaro@bcbl.eu"
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
@@ -1092,16 +1104,16 @@
                       "email": "wew94@pitt.edu"
                     },
                     {
-                      "first_name": "Charles",
-                      "last_name": "Perfetti",
-                      "order": 2,
-                      "email": "perfetti@pitt.edu"
-                    },
-                    {
                       "first_name": "Lin",
                       "last_name": "Chen",
-                      "order": 3,
+                      "order": 2,
                       "email": "linchen8@illinois.edu"
+                    },
+                    {
+                      "first_name": "Charles",
+                      "last_name": "Perfetti",
+                      "order": 3,
+                      "email": "perfetti@pitt.edu"
                     }
                   ],
                   "topic": "Neural data (EEG, fMRI, MEG)"
@@ -1247,6 +1259,12 @@
                       "last_name": "Rimzhim",
                       "order": 1,
                       "email": "arimzhim@stevens.edu"
+                    },
+                    {
+                      "first_name": "Letitia",
+                      "last_name": "Naigles",
+                      "order": 2,
+                      "email": "letitia.naigles@uconn.edu"
                     }
                   ],
                   "topic": "Developmental / Child Language Acquisition"
@@ -1510,6 +1528,12 @@
                       "last_name": "Wang",
                       "order": 4,
                       "email": "shaonan.wang@nlpr.ia.ac.cn"
+                    },
+                    {
+                      "first_name": "Zhenguang",
+                      "last_name": "Cai",
+                      "order": 5,
+                      "email": "zhenguangcai@cuhk.edu.hk"
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
@@ -1861,19 +1885,6 @@
                       "last_name": "Patejuk",
                       "order": 4,
                       "email": "aep@ipipan.waw.pl"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
-                  "submission_id": 391,
-                  "title": "Just a mistake? - Testing a noisy channel account of ellipsis processing",
-                  "authors": [
-                    {
-                      "first_name": "Robin",
-                      "last_name": "Lemke",
-                      "order": 1,
-                      "email": "robin.lemke@uni-saarland.de"
                     }
                   ],
                   "topic": "Syntax & Morphology"
@@ -2428,7 +2439,7 @@
                 },
                 {
                   "submission_id": 164,
-                  "title": "From language processing to brain age: Bilingual experience as a neurocognitive protective factor",
+                  "title": "Language processing demands predict biological brain age: MRI evidence from bilinguals, translators, and interpreters",
                   "authors": [
                     {
                       "first_name": "Mingshi",
@@ -2584,7 +2595,7 @@
                 },
                 {
                   "submission_id": 158,
-                  "title": "Co-speech gestures modulate metaphor comprehension, but listeners still favor default interpretations.",
+                  "title": "Co-speech gestures modulate metaphor comprehension, but listeners still favordefault interpretations.",
                   "authors": [
                     {
                       "first_name": "Laura",
@@ -2902,6 +2913,12 @@
                   "last_name": "Wang",
                   "order": 4,
                   "email": "shaonan.wang@nlpr.ia.ac.cn"
+                },
+                {
+                  "first_name": "Zhenguang",
+                  "last_name": "Cai",
+                  "order": 5,
+                  "email": "zhenguangcai@cuhk.edu.hk"
                 }
               ]
             },
@@ -3670,7 +3687,7 @@
                 },
                 {
                   "submission_id": 365,
-                  "title": "The importance of neutral baselines: Cross-structural priming ≠ Shared representation",
+                  "title": "The importance of neutral baselines: Cross-structural priming does not imply shared representation",
                   "authors": [
                     {
                       "first_name": "Grusha",
@@ -3820,7 +3837,7 @@
                       "first_name": "Byung-Doh",
                       "last_name": "Oh",
                       "order": 2,
-                      "email": "oh.b@nyu.edu"
+                      "email": "byungdoh.oh@ntu.edu.sg"
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
@@ -4364,37 +4381,6 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
-                  "submission_id": 199,
-                  "title": "Mind the Gap: Morphosyntactic prediction and attraction effects in Catalan-Spanish Aging Bilinguals",
-                  "authors": [
-                    {
-                      "first_name": "Victoria",
-                      "last_name": "Cano-Sánchez",
-                      "order": 1,
-                      "email": "victoria.cano@uib.cat"
-                    },
-                    {
-                      "first_name": "Zuzanna",
-                      "last_name": "Fuchs",
-                      "order": 2,
-                      "email": "zfuchs@usc.edu"
-                    },
-                    {
-                      "first_name": "Giuseppe",
-                      "last_name": "Benigno",
-                      "order": 3,
-                      "email": "giuseppe-dario.benigno@uib.cat"
-                    },
-                    {
-                      "first_name": "Pedro",
-                      "last_name": "Guijarro-Fuentes",
-                      "order": 4,
-                      "email": "p.guijarro@uib.es"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 21,
                   "title": "Reduced efficiency in applying Binding Principle B during L2 English pronoun resolution",
                   "authors": [
@@ -4849,9 +4835,15 @@
                       "email": "jnovick1@umd.edu"
                     },
                     {
+                      "first_name": "Katherine",
+                      "last_name": "Sullivan",
+                      "order": 4,
+                      "email": "katherine.w.sullivan.civ@health.mil"
+                    },
+                    {
                       "first_name": "Stefanie",
                       "last_name": "Kuchinsky",
-                      "order": 4,
+                      "order": 5,
                       "email": "stefanie.e.kuchinsky.civ@health.mil"
                     }
                   ],
@@ -5186,7 +5178,7 @@
                 },
                 {
                   "submission_id": 195,
-                  "title": "Subject-first or Possessor-first ? Processing Ambiguity in Bangla Genitives",
+                  "title": "Resolving the Ambiguity in Bangla Genitive Case: Possessor or Subject?",
                   "authors": [
                     {
                       "first_name": "Soumini",
@@ -5567,12 +5559,6 @@
                   "last_name": "German",
                   "order": 2,
                   "email": "austingerman@uchicago.edu"
-                },
-                {
-                  "first_name": "Monica",
-                  "last_name": "Do",
-                  "order": 3,
-                  "email": "mldo89@gmail.com"
                 }
               ]
             },
@@ -7578,7 +7564,7 @@
                 },
                 {
                   "submission_id": 152,
-                  "title": "Large language models reliably predict simple metaphor norms but struggle with cognitively complex dimensions",
+                  "title": "LLMs predict metaphor norms based on word co-occurrence but struggle with relational and sensory dimensions",
                   "authors": [
                     {
                       "first_name": "Laura",
@@ -7688,7 +7674,7 @@
                     },
                     {
                       "first_name": "James",
-                      "last_name": "Baybas",
+                      "last_name": "Baybaş",
                       "order": 2,
                       "email": "jbaybas@umich.edu"
                     },
@@ -7742,13 +7728,13 @@
                     },
                     {
                       "first_name": "Elliot",
-                      "last_name": "Stork`",
+                      "last_name": "Stork",
                       "order": 11,
                       "email": "enstork@umich.edu"
                     },
                     {
                       "first_name": "Hsin-Ju",
-                      "last_name": "Wu`",
+                      "last_name": "Wu",
                       "order": 12,
                       "email": "hsinjuwu@umich.edu"
                     },
@@ -7809,9 +7795,15 @@
                       "email": "clark.3664@buckeyemail.osu.edu"
                     },
                     {
+                      "first_name": "Alex",
+                      "last_name": "Warstadt",
+                      "order": 4,
+                      "email": "awarstadt@ucsd.edu"
+                    },
+                    {
                       "first_name": "Ethan",
                       "last_name": "Wilcox",
-                      "order": 4,
+                      "order": 5,
                       "email": "ethan.wilcox@georgetown.edu"
                     }
                   ],
@@ -8131,16 +8123,16 @@
                       "email": "brasser@cl.uzh.ch"
                     },
                     {
-                      "first_name": "Maja",
-                      "last_name": "Stegenwallner-Schütz",
-                      "order": 3,
-                      "email": "stegenwa@uni-koblenz.de"
-                    },
-                    {
                       "first_name": "Lena A.",
                       "last_name": "Jäger",
-                      "order": 4,
+                      "order": 3,
                       "email": "lenaann.jaeger@uzh.ch"
+                    },
+                    {
+                      "first_name": "Maja",
+                      "last_name": "Stegenwallner-Schütz",
+                      "order": 4,
+                      "email": "stegenwa@uni-koblenz.de"
                     }
                   ],
                   "topic": "Developmental / Child Language Acquisition"
@@ -8338,9 +8330,15 @@
                       "email": "delogu@lst.uni-saarland.de"
                     },
                     {
+                      "first_name": "Myeongju",
+                      "last_name": "Lee",
+                      "order": 4,
+                      "email": "s8myleee@uni-saarland.de"
+                    },
+                    {
                       "first_name": "Matthew",
                       "last_name": "Crocker",
-                      "order": 4,
+                      "order": 5,
                       "email": "crocker@lst.uni-saarland.de"
                     }
                   ],
@@ -8367,7 +8365,7 @@
                 },
                 {
                   "submission_id": 24,
-                  "title": "Semantic prediction is hierarchical and not exhaustive",
+                  "title": "Semantic prediction is hierarchical",
                   "authors": [
                     {
                       "first_name": "Cassandra",
