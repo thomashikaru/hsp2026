@@ -245,6 +245,16 @@
             margin-bottom: 0.75rem;
         }
 
+        .abstract-pdf-link {
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+            color: #4a90e2;
+        }
+
+        .abstract-pdf-link:hover {
+            text-decoration: underline;
+        }
+
         .event-title {
             font-size: 1.15rem;
             font-weight: 500;
@@ -713,7 +723,7 @@
             }
 
             if (event.abstract_id) {
-                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span>`;
+                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span> <a href="abstracts/submission_${parseInt(event.abstract_id, 10)}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
             }
 
             if (event.title) {
@@ -756,7 +766,7 @@
                     html += '<div class="poster-item">';
                     // Add abstract number badge (like talks have)
                     if (poster.submission_id) {
-                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span>`;
+                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span> <a href="abstracts/submission_${poster.submission_id}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
                     }
                     html += `<div class="poster-title">${escapeHtml(poster.title)}</div>`;
                     if (poster.authors && poster.authors.length > 0) {

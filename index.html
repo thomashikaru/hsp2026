@@ -133,29 +133,64 @@
     </main>
     <section class="committee-contact">
         <div class="container">
-            <div class="two-column-grid">
-                <div class="column">
-                    <h2>Organizing Committee</h2>
-                    <div class="committee-list">
-                        <div class="committee-member">
-                            <h3>Local Organizing Committee</h3>
-                            <p>Edward Gibson (MIT)</p>
-                            <p>Moshe Poliak (MIT)</p>
-                            <p>Amani Maina-Kilaas (MIT)</p>
-                            <p>Roger Levy (MIT)</p>
-                            <p>Hope Kean (MIT)</p>
-                            <p>Evelina Fedorenko (MIT)</p>
-                            <p>Thomas Hiraku Clark (MIT)</p>
-                            <p>Sihan Chen (MIT)</p>
-                        </div>
+            <h2 class="committee-section-title">Organizing Committee</h2>
+            <p class="committee-subtitle">Local Organizing Committee</p>
+            <div class="committee-grid">
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/gibson.jpg" alt="Edward Gibson" class="committee-avatar">
                     </div>
+                    <span class="committee-name">Edward Gibson</span>
+                    <span class="committee-affiliation">MIT</span>
                 </div>
-                <div class="column">
-                    <h2>Questions or accommodations?</h2>
-                    <div class="contact-info">
-                        <p>Please contact us with any questions or accommodation requests regarding the conference. Let us know what we can do to make the conference accessible to you.</p>
-                        <p><strong>Email:</strong> info@hsp2026.org</p>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/poliak.jpg" alt="Moshe Poliak" class="committee-avatar">
                     </div>
+                    <span class="committee-name">Moshe Poliak</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/mainkilaas.webp" alt="Amani Maina-Kilaas" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Amani Maina-Kilaas</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/levy.jpg" alt="Roger Levy" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Roger Levy</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/kean.jpeg" alt="Hope Kean" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Hope Kean</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/fedorenko.jpg" alt="Evelina Fedorenko" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Evelina Fedorenko</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/clark.jpg" alt="Thomas Hikaru Clark" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Thomas Hikaru Clark</span>
+                    <span class="committee-affiliation">MIT</span>
+                </div>
+                <div class="committee-card">
+                    <div class="committee-avatar-wrap">
+                        <img src="images/chen.jpg" alt="Sihan Chen" class="committee-avatar">
+                    </div>
+                    <span class="committee-name">Sihan Chen</span>
+                    <span class="committee-affiliation">MIT</span>
                 </div>
             </div>
         </div>
@@ -169,61 +204,116 @@
             }
             
             .committee-contact {
-                padding: 4rem 0;
+                padding: 4rem 0 3rem;
                 background-color: #f8fafc;
             }
             
-            .two-column-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 4rem;
-            }
-            
-            .column h2 {
-                margin-bottom: 2rem;
+            .committee-section-title {
+                margin-bottom: 0.35rem;
                 color: #40464c;
                 font-size: 2rem;
+                text-align: center;
             }
             
-            .committee-member {
-                margin-bottom: 2rem;
-            }
-            
-            .committee-member h3 {
-                color: #40464c;
-                margin-bottom: 1rem;
-                font-size: 1.25rem;
-            }
-            
-            .committee-member p {
-                margin: 0.5rem 0;
+            .committee-subtitle {
+                margin-bottom: 2.5rem;
                 color: #6b7280;
+                font-size: 1rem;
+                text-align: center;
             }
             
-            .contact-info {
+            .committee-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem 1.5rem;
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            
+            .committee-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .committee-avatar-wrap {
+                width: 96px;
+                height: 96px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 0.75rem;
+                flex-shrink: 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+            
+            .committee-avatar {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .committee-name {
+                font-weight: 600;
+                color: #1f2937;
+                font-size: 0.95rem;
+                line-height: 1.3;
+            }
+            
+            .committee-affiliation {
+                font-size: 0.85rem;
+                color: #6b7280;
+                margin-top: 0.2rem;
+            }
+            
+            @media (max-width: 768px) {
+                .committee-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.75rem 1rem;
+                }
+                .committee-avatar-wrap {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        </style>
+    </section>
+
+    <section class="questions-accommodations">
+        <div class="container">
+            <h2 class="questions-section-title">Questions or accommodations?</h2>
+            <div class="contact-info">
+                <p>Please contact us with any questions or accommodation requests regarding the conference. Let us know what we can do to make the conference accessible to you.</p>
+                <p><strong>Email:</strong> <a href="mailto:info@hsp2026.org">info@hsp2026.org</a></p>
+            </div>
+        </div>
+        <style>
+            .questions-accommodations {
+                padding: 3rem 0 4rem;
+                background-color: #f8fafc;
+            }
+            
+            .questions-section-title {
+                margin-bottom: 1.25rem;
+                color: #40464c;
+                font-size: 1.75rem;
+            }
+            
+            .questions-accommodations .contact-info {
                 background: white;
                 padding: 2rem;
                 border-radius: 12px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+                max-width: 560px;
             }
             
-            .contact-info p {
+            .questions-accommodations .contact-info p {
                 margin: 1rem 0;
                 color: #6b7280;
             }
             
-            .contact-note {
-                margin-top: 2rem;
-                padding-top: 1rem;
-                border-top: 1px solid #e5e7eb;
-                font-size: 0.9rem;
-            }
-            
-            @media (max-width: 768px) {
-                .two-column-grid {
-                    grid-template-columns: 1fr;
-                    gap: 2rem;
-                }
+            .questions-accommodations .contact-info a {
+                color: #750014;
             }
         </style>
     </section>

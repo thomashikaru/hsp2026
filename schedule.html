@@ -3,792 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSP Conference Schedule</title>
+    <title>Schedule - HSP 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .schedule-hero {
+            background: linear-gradient(135deg, #750014 0%, #8b959e 100%);
+            padding: 120px 0 50px;
+            text-align: center;
+            color: white;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-            padding: 2rem;
-            max-width: 1200px;
+        .schedule-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white !important;
+        }
+
+        .schedule-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        header {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid #e0e0e0;
+        .schedule-section {
+            padding: 80px 0;
         }
 
-        h1 {
-            font-size: 2rem;
-            font-weight: 300;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .day-selector {
+        .day-tabs {
             display: flex;
-            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .day-selector label {
-            font-weight: 500;
-            color: #555;
-        }
-
-        select {
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 6px;
+        .day-tab {
+            padding: 1rem 2rem;
             background: white;
-            color: #333;
-            cursor: pointer;
-            transition: border-color 0.2s;
-            min-width: 200px;
-        }
-
-        select:hover {
-            border-color: #999;
-        }
-
-        select:focus {
-            outline: none;
-            border-color: #4a90e2;
-        }
-
-        .schedule-container {
-            background: white;
+            border: 2px solid #e5e7eb;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .session {
-            border-bottom: 3px solid #e8e8e8;
-        }
-
-        .session:last-child {
-            border-bottom: none;
-        }
-
-        .session-header {
-            background: #f8f9fa;
-            padding: 1.25rem 1.5rem;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .session-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.25rem;
-        }
-
-        .session-time {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .events-list {
-            padding: 0;
-        }
-
-        .event {
-            padding: 1.5rem;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background-color 0.2s;
-        }
-
-        .event:hover {
-            background-color: #fafafa;
-        }
-
-        .event:last-child {
-            border-bottom: none;
-        }
-
-        .event.break {
-            background: #fff9e6;
-            border-left: 4px solid #ffc107;
-        }
-
-        .event.introduction {
-            background: #e8f4f8;
-            border-left: 4px solid #2196f3;
-        }
-
-        .event.poster {
-            background: #f0f8f0;
-            border-left: 4px solid #4caf50;
             cursor: pointer;
+            font-weight: 600;
+            color: #6b7280;
+            transition: all 0.3s ease;
         }
 
-        .event.poster:hover {
-            background: #e8f5e8;
+        .day-tab.active {
+            background: #7c3aed;
+            color: white;
+            border-color: #7c3aed;
         }
 
-        .poster-list {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
+        .day-tab:hover {
+            border-color: #7c3aed;
+            color: #7c3aed;
+        }
+
+        .day-tab.active:hover {
+            color: white;
+        }
+
+        .schedule-day {
             display: none;
         }
 
-        .event.poster.expanded .poster-list {
+        .schedule-day.active {
             display: block;
         }
 
-        .poster-item {
-            padding: 0.75rem;
-            margin-bottom: 0.75rem;
+        .time-slot {
             background: white;
-            border-radius: 4px;
-            border-left: 3px solid #4caf50;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #7c3aed;
+            transition: all 0.3s ease;
         }
 
-        .poster-item.hidden {
-            display: none;
+        .time-slot:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .poster-item .abstract-id {
-            margin-bottom: 0.5rem;
-            display: inline-block;
+        .time-slot.keynote {
+            border-left-color: #dc2626;
+            background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
         }
 
-        .poster-item:last-child {
-            margin-bottom: 0;
+        .time-slot.workshop {
+            border-left-color: #059669;
         }
 
-        .poster-title {
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+        .time-slot.poster {
+            border-left-color: #d97706;
         }
 
-        .poster-authors {
-            font-size: 0.85rem;
-            color: #666;
+        .time-slot.break {
+            border-left-color: #6b7280;
+            background: #f9fafb;
         }
 
-        .poster-authors-label {
-            font-weight: 500;
-            color: #888;
-            margin-right: 0.5rem;
-        }
-
-        .poster-count {
-            display: inline-block;
-            margin-left: 0.75rem;
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .expand-icon {
-            display: inline-block;
-            margin-left: 0.5rem;
-            transition: transform 0.2s;
-            font-size: 0.9rem;
-            color: #4caf50;
-        }
-
-        .event.poster.expanded .expand-icon {
-            transform: rotate(90deg);
-        }
-
-        .event-header {
+        .time-header {
             display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 0.75rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
-        .event-time {
-            font-size: 0.95rem;
+        .time {
             font-weight: 600;
-            color: #666;
-            min-width: 70px;
-            flex-shrink: 0;
+            color: #374151;
+            font-size: 1.125rem;
         }
 
-        .event-type {
-            font-size: 0.85rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 500;
-        }
-
-        .event-content {
-            margin-left: 90px;
-        }
-
-        .abstract-id {
-            display: inline-block;
-            background: #4a90e2;
-            color: white;
+        .session-type {
             padding: 0.25rem 0.75rem;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .type-keynote {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .type-workshop {
+            background: #f0fdf4;
+            color: #059669;
+        }
+
+        .type-poster {
+            background: #fffbeb;
+            color: #d97706;
+        }
+
+        .type-break {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .session-title {
+            font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .event-title {
-            font-size: 1.15rem;
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 0.75rem;
-            line-height: 1.5;
-        }
-
-        .event.break .event-title {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .authors {
-            margin-top: 0.75rem;
-        }
-
-        .authors-label {
-            font-size: 0.85rem;
-            color: #888;
+            color: #1f2937;
             margin-bottom: 0.5rem;
+        }
+
+        .session-speaker {
+            color: #6b7280;
             font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
-        .author-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .author {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            background: #f0f4f8;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: #2c3e50;
-        }
-
-        .author-name {
-            font-weight: 500;
-        }
-
-        .topic {
-            margin-top: 0.75rem;
-            font-size: 0.85rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        .speaker {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .speaker-label {
-            font-weight: 500;
-            color: #888;
-        }
-
-        .abstract-text {
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            color: #555;
+        .session-description {
+            color: #6b7280;
             line-height: 1.6;
-            padding: 0.75rem;
-            background: #f8f9fa;
-            border-radius: 4px;
-            border-left: 3px solid #4a90e2;
         }
 
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: #666;
+        .session-location {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #9ca3af;
         }
 
-        .error {
-            background: #fee;
-            color: #c33;
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-
-        .search-container {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .search-bar {
+        /* Styles for dynamically loaded schedule content */
+        #schedule-content-container {
             width: 100%;
-            max-width: 500px;
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            background: white;
-            transition: border-color 0.2s;
-        }
-
-        .search-bar:focus {
-            outline: none;
-            border-color: #4a90e2;
-        }
-
-        .search-bar::placeholder {
-            color: #999;
-        }
-
-        .event.hidden {
-            display: none;
-        }
-
-        .session.hidden {
-            display: none;
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 1rem;
+            .schedule-hero h1 {
+                font-size: 2.5rem;
             }
 
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .event-header {
+            .day-tabs {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .day-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .time-header {
+                flex-direction: column;
+                align-items: flex-start;
                 gap: 0.5rem;
-            }
-
-            .event-content {
-                margin-left: 0;
-            }
-
-            .event-time {
-                min-width: auto;
-            }
-
-            .search-bar {
-                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>HSP Conference Schedule</h1>
-        <div class="day-selector">
-            <label for="daySelect">Select Day:</label>
-            <select id="daySelect">
-                <option value="">Loading...</option>
-            </select>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HSP 2026</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="submissions.html" class="nav-link">Submissions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.html" class="nav-link">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="venue.html" class="nav-link">Venue</a>
+                </li>
+                <li class="nav-item">
+                    <a href="conduct.html" class="nav-link">Code of Conduct</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <div class="search-container">
-            <input type="text" id="searchBar" class="search-bar" placeholder="Search by title, author, abstract ID, or topic...">
+    </nav>
+
+    <main>
+        <section class="schedule-hero">
+            <div class="container">
+                <h1>Conference Schedule</h1>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <div class="container">
+                <!-- Schedule content will be loaded dynamically from scheduleContents.html -->
+                <div id="schedule-content-container">
+                    <div class="loading" style="text-align: center; padding: 3rem; color: #666;">
+                        Loading schedule...
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HSP 2026</h3>
+                    <p class="footer-tagline">39th Annual Conference on Human Sentence Processing</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="submissions.html">Submissions</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="schedule.html">Conference Schedule</a></li>
+                        <li><a href="venue.html">Venue</a></li>
+                        <li><a href="conduct.html">Code of Conduct</a></li>
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul><li><a href="mailto:info@hsp2026.org">Email: info@hsp2026.org</a></li></ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; HSP 2026. All rights reserved.</p>
+            </div>
         </div>
-    </header>
+    </footer>
 
-    <div id="scheduleContainer" class="schedule-container">
-        <div class="loading">Loading schedule...</div>
-    </div>
-
+    <script src="config.js"></script>
+    <script src="script.js"></script>
     <script>
-        let scheduleData = null;
-        const daySelect = document.getElementById('daySelect');
-        const scheduleContainer = document.getElementById('scheduleContainer');
-        const searchBar = document.getElementById('searchBar');
-
-        // Load schedule data
-        fetch('schedule.json')
-            .then(response => {
+        // Load schedule content from scheduleContents.html
+        async function loadScheduleContent() {
+            const container = document.getElementById('schedule-content-container');
+            
+            try {
+                // Fetch the scheduleContents.html file
+                const response = await fetch('scheduleContents.html');
                 if (!response.ok) {
-                    throw new Error('Failed to load schedule.json');
+                    throw new Error('Failed to load schedule contents');
                 }
-                return response.json();
-            })
-            .then(data => {
-                scheduleData = data;
-                populateDaySelector();
-                displayDay('thursday'); // Default to Thursday
-            })
-            .catch(error => {
-                scheduleContainer.innerHTML = `<div class="error">Error loading schedule: ${error.message}</div>`;
-                console.error('Error:', error);
-            });
-
-        function populateDaySelector() {
-            const days = Object.keys(scheduleData.days);
-            daySelect.innerHTML = '';
-            
-            days.forEach(day => {
-                const option = document.createElement('option');
-                option.value = day;
-                option.textContent = capitalizeDay(day);
-                daySelect.appendChild(option);
-            });
-
-            daySelect.addEventListener('change', (e) => {
-                displayDay(e.target.value);
-            });
-
-            // Add search functionality
-            searchBar.addEventListener('input', (e) => {
-                filterSchedule(e.target.value);
-            });
-        }
-
-        function capitalizeDay(day) {
-            return day.charAt(0).toUpperCase() + day.slice(1);
-        }
-
-        function displayDay(dayKey) {
-            if (!scheduleData || !scheduleData.days[dayKey]) {
-                scheduleContainer.innerHTML = '<div class="error">Day not found</div>';
-                return;
-            }
-
-            const day = scheduleData.days[dayKey];
-            let html = '';
-
-            // Process all sessions and events chronologically
-            const allEvents = [];
-            day.sessions.forEach(session => {
-                session.events.forEach(event => {
-                    allEvents.push({
-                        ...event,
-                        sessionTitle: session.session_title,
-                        sessionStart: session.start_time,
-                        sessionEnd: session.end_time
-                    });
-                });
-            });
-
-            // Group events by session
-            let currentSession = null;
-            day.sessions.forEach(session => {
-                if (session.events.length === 0) return;
-
-                // Session header
-                if (currentSession !== session.session_title) {
-                    if (currentSession !== null) {
-                        html += '</div></div>'; // Close previous session
-                    }
-                    html += `
-                        <div class="session" data-session-title="${escapeHtml(session.session_title)}">
-                            <div class="session-header">
-                                <div class="session-title">${session.session_title}</div>
-                                ${session.start_time && session.end_time ? 
-                                    `<div class="session-time">${formatTime(session.start_time)} - ${formatTime(session.end_time)}</div>` : 
-                                    ''}
-                            </div>
-                            <div class="events-list">
-                    `;
-                    currentSession = session.session_title;
-                }
-
-                // Events in this session
-                session.events.forEach(event => {
-                    html += renderEvent(event);
-                });
-            });
-
-            if (currentSession !== null) {
-                html += '</div></div>'; // Close last session
-            }
-
-            scheduleContainer.innerHTML = html;
-            
-            // Add click handlers for poster sessions
-            document.querySelectorAll('.event.poster').forEach(posterEvent => {
-                posterEvent.addEventListener('click', function() {
-                    this.classList.toggle('expanded');
-                });
-            });
-
-            // Apply current search filter if any
-            if (searchBar.value) {
-                filterSchedule(searchBar.value);
-            }
-        }
-
-        function filterSchedule(searchTerm) {
-            if (!searchTerm || searchTerm.trim() === '') {
-                // Show all events, sessions, and posters
-                document.querySelectorAll('.event').forEach(event => {
-                    event.classList.remove('hidden');
-                });
-                document.querySelectorAll('.session').forEach(session => {
-                    session.classList.remove('hidden');
-                });
-                document.querySelectorAll('.poster-item').forEach(poster => {
-                    poster.classList.remove('hidden');
-                });
-                return;
-            }
-
-            const searchLower = searchTerm.toLowerCase().trim();
-
-            // Filter regular events
-            document.querySelectorAll('.event').forEach(eventEl => {
-                const isPosterSession = eventEl.classList.contains('poster');
                 
-                if (isPosterSession) {
-                    // For poster sessions, filter individual posters
-                    // Auto-expand poster session to show filtered results
-                    eventEl.classList.add('expanded');
-                    filterPostersInSession(eventEl, searchLower);
-                    // Show the poster session if it has any visible posters
-                    const hasVisiblePosters = eventEl.querySelector('.poster-item:not(.hidden)');
-                    if (hasVisiblePosters) {
-                        eventEl.classList.remove('hidden');
-                    } else {
-                        eventEl.classList.add('hidden');
+                const html = await response.text();
+                
+                // Use DOMParser to properly parse the HTML document
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Extract and inject styles from scheduleContents.html
+                const styleTag = doc.querySelector('style');
+                if (styleTag) {
+                    // Remove existing schedule-contents-styles if it exists
+                    const existingStyle = document.getElementById('schedule-contents-styles');
+                    if (existingStyle) {
+                        existingStyle.remove();
                     }
-                } else {
-                    // For regular events, filter the event itself
-                    const eventText = getEventSearchText(eventEl, false); // Don't include poster content
-                    const matches = eventText.toLowerCase().includes(searchLower);
                     
-                    if (matches) {
-                        eventEl.classList.remove('hidden');
-                    } else {
-                        eventEl.classList.add('hidden');
-                    }
+                    // Scope the styles to only apply within the schedule-content-container
+                    // This prevents global styles from affecting the navbar and other page elements
+                    let styleContent = styleTag.textContent;
+                    
+                    // Remove problematic body properties that would affect the entire page
+                    // Remove padding, max-width, and margin from body rule
+                    styleContent = styleContent.replace(
+                        /body\s*\{([^}]*)\}/g,
+                        (match, bodyStyles) => {
+                            // Remove padding, max-width, and margin properties
+                            let cleanedStyles = bodyStyles
+                                .replace(/padding:\s*[^;]+;?/gi, '')
+                                .replace(/max-width:\s*[^;]+;?/gi, '')
+                                .replace(/margin:\s*[^;]+;?/gi, '')
+                                .trim();
+                            // Scope remaining body styles to the container
+                            return `#schedule-content-container { ${cleanedStyles} }`;
+                        }
+                    );
+                    
+                    // Scope * selector to the container (the reset is fine, but scope it to avoid conflicts)
+                    styleContent = styleContent.replace(/^\*\s*\{/gm, '#schedule-content-container * {');
+                    
+                    // Scope html selector if present
+                    styleContent = styleContent.replace(/^html\s*\{/gm, '#schedule-content-container {');
+                    
+                    // Inject scoped styles into the head
+                    const scopedStyle = document.createElement('style');
+                    scopedStyle.id = 'schedule-contents-styles';
+                    scopedStyle.textContent = styleContent;
+                    document.head.appendChild(scopedStyle);
                 }
-            });
-
-            // Hide sessions with no visible events
-            document.querySelectorAll('.session').forEach(session => {
-                const eventsList = session.querySelector('.events-list');
-                if (eventsList) {
-                    const hasVisibleEvents = eventsList.querySelector('.event:not(.hidden)');
-                    if (hasVisibleEvents) {
-                        session.classList.remove('hidden');
-                    } else {
-                        session.classList.add('hidden');
-                    }
-                }
-            });
-        }
-
-        function filterPostersInSession(posterSessionEl, searchLower) {
-            const posterItems = posterSessionEl.querySelectorAll('.poster-item');
-            
-            posterItems.forEach(posterItem => {
-                const posterText = getPosterSearchText(posterItem);
-                const matches = posterText.toLowerCase().includes(searchLower);
                 
-                if (matches) {
-                    posterItem.classList.remove('hidden');
+                // Extract the body content
+                const bodyContent = doc.querySelector('body');
+                if (!bodyContent) {
+                    throw new Error('No body content found in scheduleContents.html');
+                }
+                
+                // Extract the header and schedule container
+                const header = bodyContent.querySelector('header');
+                const scheduleContainer = bodyContent.querySelector('#scheduleContainer');
+                
+                // Build the content to insert
+                let contentToInsert = '';
+                
+                // Include the header (day selector and search) if it exists
+                if (header) {
+                    contentToInsert += header.outerHTML;
+                }
+                
+                // Include the schedule container if it exists, otherwise include all body content
+                if (scheduleContainer) {
+                    contentToInsert += scheduleContainer.outerHTML;
                 } else {
-                    posterItem.classList.add('hidden');
+                    // Fallback: include all body content
+                    contentToInsert = bodyContent.innerHTML;
                 }
-            });
-        }
-
-        function getPosterSearchText(posterElement) {
-            let text = '';
-            
-            // Get abstract ID
-            const abstractId = posterElement.querySelector('.abstract-id');
-            if (abstractId) {
-                text += abstractId.textContent + ' ';
-            }
-            
-            // Get title
-            const title = posterElement.querySelector('.poster-title');
-            if (title) {
-                text += title.textContent + ' ';
-            }
-            
-            // Get authors
-            const authors = posterElement.querySelector('.poster-authors');
-            if (authors) {
-                text += authors.textContent + ' ';
-            }
-            
-            return text;
-        }
-
-        function getEventSearchText(eventElement, includePosters = true) {
-            // Collect all searchable text from the event
-            let text = '';
-            
-            // Get abstract ID
-            const abstractId = eventElement.querySelector('.abstract-id');
-            if (abstractId) {
-                text += abstractId.textContent + ' ';
-            }
-            
-            // Get title
-            const title = eventElement.querySelector('.event-title');
-            if (title) {
-                text += title.textContent + ' ';
-            }
-            
-            // Get speaker (for invited talks / introduction)
-            const speaker = eventElement.querySelector('.speaker');
-            if (speaker) {
-                text += speaker.textContent + ' ';
-            }
-
-            // Get authors
-            const authors = eventElement.querySelectorAll('.author-name');
-            authors.forEach(author => {
-                text += author.textContent + ' ';
-            });
-            
-            // Get topic
-            const topic = eventElement.querySelector('.topic');
-            if (topic) {
-                text += topic.textContent + ' ';
-            }
-            
-            // Get abstract
-            const abstract = eventElement.querySelector('.abstract-text');
-            if (abstract) {
-                text += abstract.textContent + ' ';
-            }
-            
-            // Only include poster content if requested (for non-poster events that might reference posters)
-            if (includePosters) {
-                const posterTitles = eventElement.querySelectorAll('.poster-title');
-                posterTitles.forEach(posterTitle => {
-                    text += posterTitle.textContent + ' ';
+                
+                container.innerHTML = contentToInsert;
+                
+                // Extract and execute scripts from scheduleContents.html
+                const scripts = doc.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    // Copy script content
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    // Execute the script
+                    document.body.appendChild(newScript);
                 });
                 
-                const posterAuthors = eventElement.querySelectorAll('.poster-authors');
-                posterAuthors.forEach(posterAuthor => {
-                    text += posterAuthor.textContent + ' ';
-                });
+            } catch (error) {
+                console.error('Error loading schedule content:', error);
+                container.innerHTML = `
+                    <div class="error" style="background: #fee; color: #c33; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                        Error loading schedule: ${error.message}
+                    </div>
+                `;
             }
-            
-            return text;
         }
-
-        function renderEvent(event) {
-            const isBreak = event.type && event.type.toLowerCase().includes('break');
-            const isIntroduction = event.type && event.type.toLowerCase().includes('introduction');
-            const isPoster = event.type && event.type.toLowerCase().includes('poster');
-            const isInvitedTalk = event.type && event.type.toLowerCase().includes('invited');
-            const eventClass = isBreak ? 'break' : (isIntroduction ? 'introduction' : (isPoster ? 'poster' : ''));
-            
-            // Use these variables in the function scope
-            const shouldShowType = !isBreak && !isPoster;
-            const shouldShowTopic = !isBreak && !isPoster;
-            // Show speaker only for Conf. Introduction and Invited Talks (they don't list authors separately)
-            const shouldShowSpeaker = isIntroduction || isInvitedTalk;
-            
-            // Store isPoster for use in poster list rendering
-            const hasPosters = isPoster && event.posters && event.posters.length > 0;
-
-            let html = `<div class="event ${eventClass}">`;
-            html += '<div class="event-header">';
-            
-            if (event.time) {
-                html += `<div class="event-time">${formatTime(event.time)}</div>`;
-            }
-            
-            html += '<div class="event-content">';
-            
-            if (event.type && shouldShowType) {
-                html += `<div class="event-type">${event.type}</div>`;
-            }
-
-            if (event.abstract_id) {
-                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span>`;
-            }
-
-            if (event.title) {
-                html += `<div class="event-title">${escapeHtml(event.title)}</div>`;
-            } else if (isBreak) {
-                html += `<div class="event-title">${escapeHtml(event.type)}</div>`;
-            } else if (isPoster) {
-                const posterCount = event.posters ? ` (${event.posters.length} posters)` : '';
-                html += `<div class="event-title">${escapeHtml(event.type)}${posterCount}<span class="expand-icon">▶</span></div>`;
-            }
-
-            // Add abstract for invited talks if available
-            if (event.abstract && !isBreak && !isPoster) {
-                html += `<div class="abstract-text">${escapeHtml(event.abstract)}</div>`;
-            }
-
-            if (event.speaker && shouldShowSpeaker) {
-                html += `<div class="speaker"><span class="speaker-label">Speaker:</span> ${escapeHtml(event.speaker)}</div>`;
-            }
-
-            if (event.authors && event.authors.length > 0) {
-                html += '<div class="authors">';
-                html += '<div class="authors-label">Authors:</div>';
-                html += '<div class="author-list">';
-                event.authors.forEach(author => {
-                    const authorName = `${author.first_name} ${author.last_name}`;
-                    html += `<span class="author"><span class="author-name">${escapeHtml(authorName)}</span></span>`;
-                });
-                html += '</div></div>';
-            }
-
-            if (event.topic && shouldShowTopic) {
-                html += `<div class="topic">${escapeHtml(event.topic)}</div>`;
-            }
-
-            // Add poster list if this is a poster session
-            if (hasPosters) {
-                html += '<div class="poster-list">';
-                event.posters.forEach(poster => {
-                    html += '<div class="poster-item">';
-                    // Add abstract number badge (like talks have)
-                    if (poster.submission_id) {
-                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span>`;
-                    }
-                    html += `<div class="poster-title">${escapeHtml(poster.title)}</div>`;
-                    if (poster.authors && poster.authors.length > 0) {
-                        const authorsStr = poster.authors.map(a => `${a.first_name} ${a.last_name}`).join(', ');
-                        html += `<div class="poster-authors"><span class="poster-authors-label">Authors:</span>${escapeHtml(authorsStr)}</div>`;
-                    }
-                    html += '</div>';
-                });
-                html += '</div>';
-            }
-
-            html += '</div></div></div>';
-            return html;
-        }
-
-        function formatTime(timeStr) {
-            if (!timeStr) return '';
-            // Convert 24-hour to 12-hour format
-            const [hours, minutes] = timeStr.split(':');
-            const hour = parseInt(hours);
-            const ampm = hour >= 12 ? 'pm' : 'am';
-            const hour12 = hour % 12 || 12;
-            return `${hour12}:${minutes}${ampm}`;
-        }
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
+        
+        // Load schedule content when page loads
+        document.addEventListener('DOMContentLoaded', loadScheduleContent);
     </script>
 </body>
-</html>
+</html> 
