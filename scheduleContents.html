@@ -245,16 +245,6 @@
             margin-bottom: 0.75rem;
         }
 
-        .abstract-pdf-link {
-            font-size: 0.85rem;
-            margin-left: 0.5rem;
-            color: #4a90e2;
-        }
-
-        .abstract-pdf-link:hover {
-            text-decoration: underline;
-        }
-
         .event-title {
             font-size: 1.15rem;
             font-weight: 500;
@@ -306,17 +296,6 @@
             font-style: italic;
         }
 
-        .abstract-text {
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            color: #555;
-            line-height: 1.6;
-            padding: 0.75rem;
-            background: #f8f9fa;
-            border-radius: 4px;
-            border-left: 3px solid #4a90e2;
-        }
-
         .speaker {
             margin-top: 0.5rem;
             font-size: 0.9rem;
@@ -326,6 +305,17 @@
         .speaker-label {
             font-weight: 500;
             color: #888;
+        }
+
+        .abstract-text {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+            padding: 0.75rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #4a90e2;
         }
 
         .loading {
@@ -413,7 +403,7 @@
             </select>
         </div>
         <div class="search-container">
-            <input type="text" id="searchBar" class="search-bar" placeholder="Search by title, speaker, author, abstract ID, or topic...">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search by title, author, abstract ID, or topic...">
         </div>
     </header>
 
@@ -655,12 +645,12 @@
                 text += title.textContent + ' ';
             }
             
-            // Get speaker
+            // Get speaker (for invited talks / introduction)
             const speaker = eventElement.querySelector('.speaker');
             if (speaker) {
                 text += speaker.textContent + ' ';
             }
-            
+
             // Get authors
             const authors = eventElement.querySelectorAll('.author-name');
             authors.forEach(author => {
@@ -699,12 +689,14 @@
             const isBreak = event.type && event.type.toLowerCase().includes('break');
             const isIntroduction = event.type && event.type.toLowerCase().includes('introduction');
             const isPoster = event.type && event.type.toLowerCase().includes('poster');
+            const isInvitedTalk = event.type && event.type.toLowerCase().includes('invited');
             const eventClass = isBreak ? 'break' : (isIntroduction ? 'introduction' : (isPoster ? 'poster' : ''));
             
             // Use these variables in the function scope
             const shouldShowType = !isBreak && !isPoster;
-            const shouldShowSpeaker = !isBreak && !isPoster;
             const shouldShowTopic = !isBreak && !isPoster;
+            // Show speaker only for Conf. Introduction and Invited Talks (they don't list authors separately)
+            const shouldShowSpeaker = isIntroduction || isInvitedTalk;
             
             // Store isPoster for use in poster list rendering
             const hasPosters = isPoster && event.posters && event.posters.length > 0;
@@ -723,7 +715,7 @@
             }
 
             if (event.abstract_id) {
-                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span> <a href="abstracts/submission_${parseInt(event.abstract_id, 10)}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span>`;
             }
 
             if (event.title) {
@@ -766,7 +758,7 @@
                     html += '<div class="poster-item">';
                     // Add abstract number badge (like talks have)
                     if (poster.submission_id) {
-                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span> <a href="abstracts/submission_${poster.submission_id}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span>`;
                     }
                     html += `<div class="poster-title">${escapeHtml(poster.title)}</div>`;
                     if (poster.authors && poster.authors.length > 0) {
