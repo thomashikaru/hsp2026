@@ -5556,7 +5556,7 @@
           ]
         },
         {
-          "session_title": "Session 3 - Friday 2pm to 3:45pm (Note: There will be a No Kings event in Boston at this time.)",
+          "session_title": "Session 3 - Friday 2pm to 3:45pm",
           "start_time": "14:00",
           "end_time": "15:45",
           "chair": null,
@@ -8468,7 +8468,7 @@
           ]
         },
         {
-          "session_title": "Session 3 - Saturday 2pm to 3:45pm",
+          "session_title": "Session 3 - Saturday 2pm to 3:45pm (Note: There will be a No Kings event in Boston at this time.)",
           "start_time": "14:00",
           "end_time": "15:45",
           "chair": null,
