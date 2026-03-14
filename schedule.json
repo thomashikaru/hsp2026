@@ -6000,7 +6000,7 @@
             },
             {
               "time": "12:10",
-              "type": "Lunch (provided) and posters",
+              "type": "Lunch (provided) and posters (Note: There will be a No Kings event in Boston from 1pm to 4pm.)",
               "posters": [
                 {
                   "submission_id": 103,
@@ -8468,7 +8468,7 @@
           ]
         },
         {
-          "session_title": "Session 3 - Saturday 2pm to 3:45pm (Note: There will be a No Kings event in Boston at this time.)",
+          "session_title": "Session 3 - Saturday 2pm to 3:45pm",
           "start_time": "14:00",
           "end_time": "15:45",
           "chair": null,
