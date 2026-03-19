@@ -117,6 +117,10 @@
             border-bottom: none;
         }
 
+        .pre-events {
+            border-bottom: 3px solid #e8e8e8;
+        }
+
         .event.break {
             background: #fff9e6;
             border-left: 4px solid #ffc107;
@@ -218,7 +222,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: #666;
-            min-width: 70px;
+            min-width: 150px;
             flex-shrink: 0;
         }
 
@@ -243,16 +247,6 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 0.75rem;
-        }
-
-        .abstract-pdf-link {
-            font-size: 0.85rem;
-            margin-left: 0.5rem;
-            color: #4a90e2;
-        }
-
-        .abstract-pdf-link:hover {
-            text-decoration: underline;
         }
 
         .event-title {
@@ -313,6 +307,17 @@
         }
 
         .speaker-label {
+            font-weight: 500;
+            color: #888;
+        }
+
+        .location {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .location-label {
             font-weight: 500;
             color: #888;
         }
@@ -479,18 +484,14 @@
             const day = scheduleData.days[dayKey];
             let html = '';
 
-            // Process all sessions and events chronologically
-            const allEvents = [];
-            day.sessions.forEach(session => {
-                session.events.forEach(event => {
-                    allEvents.push({
-                        ...event,
-                        sessionTitle: session.session_title,
-                        sessionStart: session.start_time,
-                        sessionEnd: session.end_time
-                    });
+            // Render pre-session events (e.g. registration) outside any session block
+            if (day.pre_events && day.pre_events.length > 0) {
+                html += '<div class="pre-events">';
+                day.pre_events.forEach(event => {
+                    html += renderEvent(event);
                 });
-            });
+                html += '</div>';
+            }
 
             // Group events by session
             let currentSession = null;
@@ -715,7 +716,10 @@
             html += '<div class="event-header">';
             
             if (event.time) {
-                html += `<div class="event-time">${formatTime(event.time)}</div>`;
+                const timeDisplay = event.end_time
+                    ? `${formatTime(event.time)} – ${formatTime(event.end_time)}`
+                    : formatTime(event.time);
+                html += `<div class="event-time">${timeDisplay}</div>`;
             }
             
             html += '<div class="event-content">';
@@ -725,7 +729,7 @@
             }
 
             if (event.abstract_id) {
-                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span> <a href="abstracts/submission_${parseInt(event.abstract_id, 10)}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span>`;
             }
 
             if (event.title) {
@@ -761,6 +765,10 @@
                 html += `<div class="topic">${escapeHtml(event.topic)}</div>`;
             }
 
+            if (event.location) {
+                html += `<div class="location"><span class="location-label">Location:</span> ${escapeHtml(event.location)}</div>`;
+            }
+
             // Add poster list if this is a poster session
             if (hasPosters) {
                 html += '<div class="poster-list">';
@@ -768,7 +776,7 @@
                     html += '<div class="poster-item">';
                     // Add abstract number badge (like talks have)
                     if (poster.submission_id) {
-                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span> <a href="abstracts/submission_${poster.submission_id}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span>`;
                     }
                     html += `<div class="poster-title">${escapeHtml(poster.title)}</div>`;
                     if (poster.authors && poster.authors.length > 0) {
