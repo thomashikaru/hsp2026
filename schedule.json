@@ -109,7 +109,7 @@
           "events": [
             {
               "time": "10:45",
-              "type": "long talk 3",
+              "type": "long talk 2",
               "speaker": "Cory Shain",
               "title": "A language network in the individualized functional connectomes of over 1,000 human brains doing arbitrary tasks",
               "abstract_id": 233.0,
@@ -230,7 +230,7 @@
             {
               "time": "12:10",
               "type": "lunch (on your own)",
-              "location": "10-250"
+              "location": "on your own"
             }
           ]
         },
@@ -251,7 +251,7 @@
             },
             {
               "time": "14:40",
-              "type": "long talk 4",
+              "type": "long talk 3",
               "speaker": "Benedict Krieger",
               "title": "LLM layers capture the differential sensitivity to association and expectancy in ERPs",
               "abstract_id": 64.0,
@@ -491,7 +491,7 @@
               "time": "18:05",
               "type": "Poster session",
               "start_time": "18:05",
-              "end_time": "19:35",
+              "end_time": "19:55",
               "location": "Building 46 Atrium",
               "posters": [
                 {
@@ -802,119 +802,6 @@
                   "topic": "Semantics & Pragmatics"
                 },
                 {
-                  "submission_id": 335,
-                  "title": "Could 40% mean 10%? Adding an additional layer of uncertainty to the RSA framework",
-                  "authors": [
-                    {
-                      "first_name": "Anzi",
-                      "last_name": "Wang",
-                      "order": 1,
-                      "email": "anziwang2030@u.northwestern.edu"
-                    },
-                    {
-                      "first_name": "Carolyn",
-                      "last_name": "Anderson",
-                      "order": 2,
-                      "email": "ca101@wellesley.edu"
-                    },
-                    {
-                      "first_name": "Grusha",
-                      "last_name": "Prasad",
-                      "order": 3,
-                      "email": "gprasad@colgate.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 94,
-                  "title": "QUD variability in naturalistic discourse predicts scalar inference variability",
-                  "authors": [
-                    {
-                      "first_name": "Xuetong",
-                      "last_name": "Yuan",
-                      "order": 1,
-                      "email": "xuetongyuan@uchicago.edu"
-                    },
-                    {
-                      "first_name": "Minjae",
-                      "last_name": "Joh",
-                      "order": 2,
-                      "email": "johminjae@uchicago.edu"
-                    },
-                    {
-                      "first_name": "Ming",
-                      "last_name": "Xiang",
-                      "order": 3,
-                      "email": "mxming@gmail.com"
-                    }
-                  ],
-                  "topic": "Semantics & Pragmatics"
-                },
-                {
-                  "submission_id": 116,
-                  "title": "Language-Specific Transfer of Musical Skills: How Melody, Rhythm, and Accent Shape L2 Pronunciation Across Prosodic Systems",
-                  "authors": [
-                    {
-                      "first_name": "Sara",
-                      "last_name": "Ferini",
-                      "order": 1,
-                      "email": "ferini.sara@spes.uniud.it"
-                    },
-                    {
-                      "first_name": "Paolo",
-                      "last_name": "Lorusso",
-                      "order": 2,
-                      "email": "paolo.lorusso@uniud.it"
-                    }
-                  ],
-                  "topic": "Phonology & Prosody"
-                },
-                {
-                  "submission_id": 24,
-                  "title": "Semantic prediction is hierarchical",
-                  "authors": [
-                    {
-                      "first_name": "Cassandra",
-                      "last_name": "Jacobs",
-                      "order": 1,
-                      "email": "cxjacobs@buffalo.edu"
-                    },
-                    {
-                      "first_name": "Morgan",
-                      "last_name": "Grobol",
-                      "order": 2,
-                      "email": "lgrobol@parisnanterre.fr"
-                    },
-                    {
-                      "first_name": "Ryan",
-                      "last_name": "Hubbard",
-                      "order": 3,
-                      "email": "rhubbard2@albany.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 345,
-                  "title": "Processing effects obscure grammatical analyses in multiple gap constructions",
-                  "authors": [
-                    {
-                      "first_name": "Katherine",
-                      "last_name": "Howitt",
-                      "order": 1,
-                      "email": "kghowitt@umd.edu"
-                    },
-                    {
-                      "first_name": "Aron",
-                      "last_name": "Hirsch",
-                      "order": 2,
-                      "email": "hirsch@umd.edu"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 39,
                   "title": "With Subjects, Italian Relative Clauses Attach Low",
                   "authors": [
@@ -1106,37 +993,6 @@
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 60,
-                  "title": "When Verbs Forget: Evidence for Negatively Accelerated Decay in Sentence Processing",
-                  "authors": [
-                    {
-                      "first_name": "Berke",
-                      "last_name": "Şenşekerci",
-                      "order": 1,
-                      "email": "b.sensekerci@uw.edu.pl"
-                    },
-                    {
-                      "first_name": "Adam",
-                      "last_name": "Przepiórkowski",
-                      "order": 2,
-                      "email": "adamp@ipipan.waw.pl"
-                    },
-                    {
-                      "first_name": "Katarzyna",
-                      "last_name": "Kuś",
-                      "order": 3,
-                      "email": "kkus@uw.edu.pl"
-                    },
-                    {
-                      "first_name": "Agnieszka",
-                      "last_name": "Patejuk",
-                      "order": 4,
-                      "email": "aep@ipipan.waw.pl"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
                 },
                 {
                   "submission_id": 207,
@@ -2961,6 +2817,167 @@
                     }
                   ],
                   "topic": "Phonology & Prosody"
+                },
+                {
+                  "submission_id": 63,
+                  "title": "An Argument for Gradient Grammaticality",
+                  "authors": [
+                    {
+                      "first_name": "Adam",
+                      "last_name": "Przepiórkowski",
+                      "order": 1,
+                      "email": "adamp@ipipan.waw.pl"
+                    },
+                    {
+                      "first_name": "Berke",
+                      "last_name": "Şenşekerci",
+                      "order": 2,
+                      "email": "b.sensekerci@uw.edu.pl"
+                    },
+                    {
+                      "first_name": "Katarzyna",
+                      "last_name": "Kuś",
+                      "order": 3,
+                      "email": "kkus@uw.edu.pl"
+                    },
+                    {
+                      "first_name": "Agnieszka",
+                      "last_name": "Patejuk",
+                      "order": 4,
+                      "email": "aep@ipipan.waw.pl"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 188,
+                  "title": "Influence of Animacy and Collectivity on the Production of the OptionalMandarin Plural Marker \"men\"",
+                  "authors": [
+                    {
+                      "first_name": "Pu",
+                      "last_name": "Meng",
+                      "order": 1,
+                      "email": "pmeng@gmu.edu"
+                    },
+                    {
+                      "first_name": "Cynthia",
+                      "last_name": "Lukyanenko",
+                      "order": 2,
+                      "email": "clukyane@gmu.edu"
+                    },
+                    {
+                      "first_name": "Sylvia",
+                      "last_name": "Woodrose Schwartz",
+                      "order": 3,
+                      "email": "sschrei2@gmu.edu"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 164,
+                  "title": "Language processing demands predict biological brain age: MRI evidence from bilinguals, translators, and interpreters",
+                  "authors": [
+                    {
+                      "first_name": "Mingshi",
+                      "last_name": "Chen",
+                      "order": 1,
+                      "email": "m.chen@amsterdamumc.nl"
+                    },
+                    {
+                      "first_name": "Michal",
+                      "last_name": "Korenar",
+                      "order": 2,
+                      "email": "m.korenar@uva.nl"
+                    },
+                    {
+                      "first_name": "Anouk",
+                      "last_name": "Schrantee",
+                      "order": 3,
+                      "email": "a.g.schrantee@amsterdamumc.nl"
+                    },
+                    {
+                      "first_name": "Henk",
+                      "last_name": "A Marquering",
+                      "order": 4,
+                      "email": "h.a.marquering@amsterdamumc.nl"
+                    },
+                    {
+                      "first_name": "Liesbeth",
+                      "last_name": "Reneman",
+                      "order": 5,
+                      "email": "l.reneman@amsterdamumc.nl"
+                    },
+                    {
+                      "first_name": "Matthan",
+                      "last_name": "Caan",
+                      "order": 6,
+                      "email": "m.w.a.caan@amsterdamumc.nl"
+                    }
+                  ],
+                  "topic": "Neural data (EEG, fMRI, MEG)"
+                },
+                {
+                  "submission_id": 381,
+                  "title": "Agentive Iconicity in Signs: Visual Context Helps Form-Meaning Mapping in Minds & Machines",
+                  "authors": [
+                    {
+                      "first_name": "Onur",
+                      "last_name": "Keleş",
+                      "order": 1,
+                      "email": "onur.keles1@bogazici.edu.tr"
+                    },
+                    {
+                      "first_name": "Aslı",
+                      "last_name": "Özyürek",
+                      "order": 2,
+                      "email": "asli.ozyurek@mpi.nl"
+                    },
+                    {
+                      "first_name": "Gerardo",
+                      "last_name": "Ortega",
+                      "order": 3,
+                      "email": "g.ortega@bham.ac.uk"
+                    },
+                    {
+                      "first_name": "Kadir",
+                      "last_name": "Gökgöz",
+                      "order": 4,
+                      "email": "kadir.gokgoz@bogazici.edu.tr"
+                    },
+                    {
+                      "first_name": "Esam",
+                      "last_name": "Ghaleb",
+                      "order": 5,
+                      "email": "esam.ghaleb@mpi.nl"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 18,
+                  "title": "To what extent do GPT language models capture human sentence processing dynamics? Evidence from Korean subject honorification",
+                  "authors": [
+                    {
+                      "first_name": "Gyu-Ho",
+                      "last_name": "Shin",
+                      "order": 1,
+                      "email": "ghshin@uic.edu"
+                    },
+                    {
+                      "first_name": "Nayoung",
+                      "last_name": "Kwon",
+                      "order": 2,
+                      "email": "nkwon@uoregon.edu"
+                    },
+                    {
+                      "first_name": "Seongmin",
+                      "last_name": "Mun",
+                      "order": 3,
+                      "email": "seongminmun@knu.ac.kr"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 }
               ]
             }
@@ -3074,7 +3091,7 @@
           "events": [
             {
               "time": "10:45",
-              "type": "long talk 3",
+              "type": "long talk 2",
               "speaker": "Radim Lacina",
               "title": "Task effects in self-paced reading: A methodological study with Czech readers",
               "abstract_id": 143.0,
@@ -3184,7 +3201,7 @@
               "time": "12:10",
               "type": "Lunch (provided) and posters",
               "start_time": "12:10",
-              "end_time": "13:40",
+              "end_time": "14:00",
               "location": "Building 46 Atrium",
               "posters": [
                 {
@@ -3196,31 +3213,6 @@
                       "last_name": "Chen",
                       "order": 1,
                       "email": "ychen249@usc.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 18,
-                  "title": "To what extent do GPT language models capture human sentence processing dynamics? Evidence from Korean subject honorification",
-                  "authors": [
-                    {
-                      "first_name": "Gyu-Ho",
-                      "last_name": "Shin",
-                      "order": 1,
-                      "email": "ghshin@uic.edu"
-                    },
-                    {
-                      "first_name": "Nayoung",
-                      "last_name": "Kwon",
-                      "order": 2,
-                      "email": "nkwon@uoregon.edu"
-                    },
-                    {
-                      "first_name": "Seongmin",
-                      "last_name": "Mun",
-                      "order": 3,
-                      "email": "seongminmun@knu.ac.kr"
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
@@ -3799,31 +3791,6 @@
                   "topic": "Neural data (EEG, fMRI, MEG)"
                 },
                 {
-                  "submission_id": 188,
-                  "title": "Influence of Animacy and Collectivity on the Production of the OptionalMandarin Plural Marker \"men\"",
-                  "authors": [
-                    {
-                      "first_name": "Pu",
-                      "last_name": "Meng",
-                      "order": 1,
-                      "email": "pmeng@gmu.edu"
-                    },
-                    {
-                      "first_name": "Cynthia",
-                      "last_name": "Lukyanenko",
-                      "order": 2,
-                      "email": "clukyane@gmu.edu"
-                    },
-                    {
-                      "first_name": "Sylvia",
-                      "last_name": "Woodrose Schwartz",
-                      "order": 3,
-                      "email": "sschrei2@gmu.edu"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 90,
                   "title": "Word predictability and semantic similarity show distinct effects on the N400 during incremental reading comprehension of authentic texts",
                   "authors": [
@@ -4030,31 +3997,6 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
-                  "submission_id": 12,
-                  "title": "Eye gaze as a window into good-enough processing: Comprehension of active transitive and suffixal passive constructions by Mandarin-Chinese-speaking learners of Korean",
-                  "authors": [
-                    {
-                      "first_name": "Seongmin",
-                      "last_name": "Mun",
-                      "order": 1,
-                      "email": "seongminmun@knu.ac.kr"
-                    },
-                    {
-                      "first_name": "Gyu-Ho",
-                      "last_name": "Shin",
-                      "order": 2,
-                      "email": "ghshin@uic.edu"
-                    },
-                    {
-                      "first_name": "Sun Hee",
-                      "last_name": "Park",
-                      "order": 3,
-                      "email": "sunheepark@ewha.ac.kr"
-                    }
-                  ],
-                  "topic": "Bilingualism"
-                },
-                {
                   "submission_id": 373,
                   "title": "Error Sensitivity in the Next-Word Predictions of Humans and Language Models",
                   "authors": [
@@ -4091,19 +4033,6 @@
                     }
                   ],
                   "topic": "Neural data (EEG, fMRI, MEG)"
-                },
-                {
-                  "submission_id": 179,
-                  "title": "Turning the tables: Exploring implicit causality effects on cataphoric pronouns",
-                  "authors": [
-                    {
-                      "first_name": "JK",
-                      "last_name": "Subramony",
-                      "order": 1,
-                      "email": "jsubramo@usc.edu"
-                    }
-                  ],
-                  "topic": "Semantics & Pragmatics"
                 },
                 {
                   "submission_id": 266,
@@ -4173,43 +4102,6 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
-                },
-                {
-                  "submission_id": 274,
-                  "title": "In-Context Next-Word Prediction as a Mechanism for Generating Focus Alternatives",
-                  "authors": [
-                    {
-                      "first_name": "Laila",
-                      "last_name": "Johnston",
-                      "order": 1,
-                      "email": "laila_johnston@brown.edu"
-                    },
-                    {
-                      "first_name": "Daniel",
-                      "last_name": "Smits",
-                      "order": 2,
-                      "email": "dasmitstm@gmail.com"
-                    },
-                    {
-                      "first_name": "Jason",
-                      "last_name": "Ritt",
-                      "order": 3,
-                      "email": "jason_ritt@brown.edu"
-                    },
-                    {
-                      "first_name": "Ellie",
-                      "last_name": "Pavlick",
-                      "order": 4,
-                      "email": "ellie_pavlick@brown.edu"
-                    },
-                    {
-                      "first_name": "Roman",
-                      "last_name": "Feiman",
-                      "order": 5,
-                      "email": "roman_feiman@brown.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 395,
@@ -4606,37 +4498,6 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
-                  "submission_id": 63,
-                  "title": "An Argument for Gradient Grammaticality",
-                  "authors": [
-                    {
-                      "first_name": "Adam",
-                      "last_name": "Przepiórkowski",
-                      "order": 1,
-                      "email": "adamp@ipipan.waw.pl"
-                    },
-                    {
-                      "first_name": "Berke",
-                      "last_name": "Şenşekerci",
-                      "order": 2,
-                      "email": "b.sensekerci@uw.edu.pl"
-                    },
-                    {
-                      "first_name": "Katarzyna",
-                      "last_name": "Kuś",
-                      "order": 3,
-                      "email": "kkus@uw.edu.pl"
-                    },
-                    {
-                      "first_name": "Agnieszka",
-                      "last_name": "Patejuk",
-                      "order": 4,
-                      "email": "aep@ipipan.waw.pl"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 42,
                   "title": "Adults demonstrate implicit causality and consequentiality biases for novel verbs",
                   "authors": [
@@ -4679,50 +4540,6 @@
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 108,
-                  "title": "Decision-Making Styles Govern Disfluency Detection in Initial SLA: Challenging Personality-Based Predictions",
-                  "authors": [
-                    {
-                      "first_name": "Jonathan Him Nok",
-                      "last_name": "Lee",
-                      "order": 1,
-                      "email": "jonhnlee@sas.upenn.edu"
-                    },
-                    {
-                      "first_name": "Marlyse",
-                      "last_name": "Baptista",
-                      "order": 2,
-                      "email": "marlyse.baptista@sas.upenn.edu"
-                    },
-                    {
-                      "first_name": "Mark",
-                      "last_name": "Liberman",
-                      "order": 3,
-                      "email": "myl@cis.upenn.edu"
-                    }
-                  ],
-                  "topic": "Phonology & Prosody"
-                },
-                {
-                  "submission_id": 146,
-                  "title": "Online processing of morphosyntactic cues by native and non-native Korean speakers: An eye-tracking study",
-                  "authors": [
-                    {
-                      "first_name": "Jeonghwa",
-                      "last_name": "Cho",
-                      "order": 1,
-                      "email": "jhcho@hongik.ac.kr"
-                    },
-                    {
-                      "first_name": "Gyu-Ho",
-                      "last_name": "Shin",
-                      "order": 2,
-                      "email": "ghshin@uic.edu"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
                 },
                 {
                   "submission_id": 265,
@@ -5469,43 +5286,6 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
-                  "submission_id": 381,
-                  "title": "Agentive Iconicity in Signs: Visual Context Helps Form-Meaning Mapping in Minds & Machines",
-                  "authors": [
-                    {
-                      "first_name": "Onur",
-                      "last_name": "Keleş",
-                      "order": 1,
-                      "email": "onur.keles1@bogazici.edu.tr"
-                    },
-                    {
-                      "first_name": "Aslı",
-                      "last_name": "Özyürek",
-                      "order": 2,
-                      "email": "asli.ozyurek@mpi.nl"
-                    },
-                    {
-                      "first_name": "Gerardo",
-                      "last_name": "Ortega",
-                      "order": 3,
-                      "email": "g.ortega@bham.ac.uk"
-                    },
-                    {
-                      "first_name": "Kadir",
-                      "last_name": "Gökgöz",
-                      "order": 4,
-                      "email": "kadir.gokgoz@bogazici.edu.tr"
-                    },
-                    {
-                      "first_name": "Esam",
-                      "last_name": "Ghaleb",
-                      "order": 5,
-                      "email": "esam.ghaleb@mpi.nl"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
                   "submission_id": 332,
                   "title": "Investigating Speech Production in Aphasia: A Usage-Based Approach",
                   "authors": [
@@ -5605,6 +5385,237 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 13,
+                  "title": "Second language processing of socially grounded verbal morphology: A case of subject honorification in Korean",
+                  "authors": [
+                    {
+                      "first_name": "Nayoung",
+                      "last_name": "Kwon",
+                      "order": 1,
+                      "email": "nkwon@uoregon.edu"
+                    },
+                    {
+                      "first_name": "Gyu-Ho",
+                      "last_name": "Shin",
+                      "order": 2,
+                      "email": "ghshin@uic.edu"
+                    },
+                    {
+                      "first_name": "Sun Hee",
+                      "last_name": "Park",
+                      "order": 3,
+                      "email": "sunheepark@ewha.ac.kr"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 60,
+                  "title": "When Verbs Forget: Evidence for Negatively Accelerated Decay in Sentence Processing",
+                  "authors": [
+                    {
+                      "first_name": "Berke",
+                      "last_name": "Şenşekerci",
+                      "order": 1,
+                      "email": "b.sensekerci@uw.edu.pl"
+                    },
+                    {
+                      "first_name": "Adam",
+                      "last_name": "Przepiórkowski",
+                      "order": 2,
+                      "email": "adamp@ipipan.waw.pl"
+                    },
+                    {
+                      "first_name": "Katarzyna",
+                      "last_name": "Kuś",
+                      "order": 3,
+                      "email": "kkus@uw.edu.pl"
+                    },
+                    {
+                      "first_name": "Agnieszka",
+                      "last_name": "Patejuk",
+                      "order": 4,
+                      "email": "aep@ipipan.waw.pl"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 335,
+                  "title": "Could 40% mean 10%? Adding an additional layer of uncertainty to the RSA framework",
+                  "authors": [
+                    {
+                      "first_name": "Anzi",
+                      "last_name": "Wang",
+                      "order": 1,
+                      "email": "anziwang2030@u.northwestern.edu"
+                    },
+                    {
+                      "first_name": "Carolyn",
+                      "last_name": "Anderson",
+                      "order": 2,
+                      "email": "ca101@wellesley.edu"
+                    },
+                    {
+                      "first_name": "Grusha",
+                      "last_name": "Prasad",
+                      "order": 3,
+                      "email": "gprasad@colgate.edu"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 94,
+                  "title": "QUD variability in naturalistic discourse predicts scalar inference variability",
+                  "authors": [
+                    {
+                      "first_name": "Xuetong",
+                      "last_name": "Yuan",
+                      "order": 1,
+                      "email": "xuetongyuan@uchicago.edu"
+                    },
+                    {
+                      "first_name": "Minjae",
+                      "last_name": "Joh",
+                      "order": 2,
+                      "email": "johminjae@uchicago.edu"
+                    },
+                    {
+                      "first_name": "Ming",
+                      "last_name": "Xiang",
+                      "order": 3,
+                      "email": "mxming@gmail.com"
+                    }
+                  ],
+                  "topic": "Semantics & Pragmatics"
+                },
+                {
+                  "submission_id": 116,
+                  "title": "Language-Specific Transfer of Musical Skills: How Melody, Rhythm, and Accent Shape L2 Pronunciation Across Prosodic Systems",
+                  "authors": [
+                    {
+                      "first_name": "Sara",
+                      "last_name": "Ferini",
+                      "order": 1,
+                      "email": "ferini.sara@spes.uniud.it"
+                    },
+                    {
+                      "first_name": "Paolo",
+                      "last_name": "Lorusso",
+                      "order": 2,
+                      "email": "paolo.lorusso@uniud.it"
+                    }
+                  ],
+                  "topic": "Phonology & Prosody"
+                },
+                {
+                  "submission_id": 24,
+                  "title": "Semantic prediction is hierarchical",
+                  "authors": [
+                    {
+                      "first_name": "Cassandra",
+                      "last_name": "Jacobs",
+                      "order": 1,
+                      "email": "cxjacobs@buffalo.edu"
+                    },
+                    {
+                      "first_name": "Morgan",
+                      "last_name": "Grobol",
+                      "order": 2,
+                      "email": "lgrobol@parisnanterre.fr"
+                    },
+                    {
+                      "first_name": "Ryan",
+                      "last_name": "Hubbard",
+                      "order": 3,
+                      "email": "rhubbard2@albany.edu"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 162,
+                  "title": "Gone without a Trace: Why 5 LMs Fail to Track Non-Local Dependency Resolution",
+                  "authors": [
+                    {
+                      "first_name": "Liliana",
+                      "last_name": "Nentcheva",
+                      "order": 1,
+                      "email": "lily.nentcheva.15@ucl.ac.uk"
+                    },
+                    {
+                      "first_name": "Donald",
+                      "last_name": "Dunagan",
+                      "order": 2,
+                      "email": "ddunaga1@jh.edu"
+                    },
+                    {
+                      "first_name": "Milos",
+                      "last_name": "Stanojevic",
+                      "order": 3,
+                      "email": "m.stanojevic@ucl.ac.uk"
+                    },
+                    {
+                      "first_name": "Sebastian",
+                      "last_name": "Schuster",
+                      "order": 4,
+                      "email": "sebastian.schuster@univie.ac.at"
+                    },
+                    {
+                      "first_name": "Andrea",
+                      "last_name": "Santi",
+                      "order": 5,
+                      "email": "a.santi@ucl.ac.uk"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 345,
+                  "title": "Processing effects obscure grammatical analyses in multiple gap constructions",
+                  "authors": [
+                    {
+                      "first_name": "Katherine",
+                      "last_name": "Howitt",
+                      "order": 1,
+                      "email": "kghowitt@umd.edu"
+                    },
+                    {
+                      "first_name": "Aron",
+                      "last_name": "Hirsch",
+                      "order": 2,
+                      "email": "hirsch@umd.edu"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 301,
+                  "title": "Sampling-Based Assumptions Simplify Modeling of Speeded Cloze Response Times",
+                  "authors": [
+                    {
+                      "first_name": "Sathvik",
+                      "last_name": "Nair",
+                      "order": 1,
+                      "email": "sathvik@umd.edu"
+                    },
+                    {
+                      "first_name": "Philip",
+                      "last_name": "Resnik",
+                      "order": 2,
+                      "email": "resnik@umd.edu"
+                    },
+                    {
+                      "first_name": "Colin",
+                      "last_name": "Phillips",
+                      "order": 3,
+                      "email": "colin.phillips@ling-phil.ox.ac.uk"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 }
               ]
             }
@@ -5627,7 +5638,7 @@
             },
             {
               "time": "14:40",
-              "type": "long talk 4",
+              "type": "long talk 3",
               "speaker": "Kuan-Jung Huang",
               "title": "A-Mazing kids: A-Maze's viability and potential to study child incremental processing",
               "abstract_id": 346.0,
@@ -5872,7 +5883,7 @@
             {
               "time": "18:05",
               "type": "Dinner on your own",
-              "location": "10-250"
+              "location": "on your own"
             }
           ]
         }
@@ -6100,34 +6111,9 @@
               "time": "12:10",
               "type": "Lunch (provided) and posters (Note: There will be a No Kings event in Boston from 1pm to 4pm.)",
               "start_time": "12:10",
-              "end_time": "13:40",
+              "end_time": "14:00",
               "location": "Building 46 Atrium",
               "posters": [
-                {
-                  "submission_id": 13,
-                  "title": "Second language processing of socially grounded verbal morphology: A case of subject honorification in Korean",
-                  "authors": [
-                    {
-                      "first_name": "Nayoung",
-                      "last_name": "Kwon",
-                      "order": 1,
-                      "email": "nkwon@uoregon.edu"
-                    },
-                    {
-                      "first_name": "Gyu-Ho",
-                      "last_name": "Shin",
-                      "order": 2,
-                      "email": "ghshin@uic.edu"
-                    },
-                    {
-                      "first_name": "Sun Hee",
-                      "last_name": "Park",
-                      "order": 3,
-                      "email": "sunheepark@ewha.ac.kr"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
                 {
                   "submission_id": 103,
                   "title": "Structural Priming for Implausible Sentences in Interactive Production: The Role of Interlocutors’ Linguistic Competence",
@@ -6252,68 +6238,6 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
-                },
-                {
-                  "submission_id": 162,
-                  "title": "Gone without a Trace: Why 5 LMs Fail to Track Non-Local Dependency Resolution",
-                  "authors": [
-                    {
-                      "first_name": "Liliana",
-                      "last_name": "Nentcheva",
-                      "order": 1,
-                      "email": "lily.nentcheva.15@ucl.ac.uk"
-                    },
-                    {
-                      "first_name": "Donald",
-                      "last_name": "Dunagan",
-                      "order": 2,
-                      "email": "ddunaga1@jh.edu"
-                    },
-                    {
-                      "first_name": "Milos",
-                      "last_name": "Stanojevic",
-                      "order": 3,
-                      "email": "m.stanojevic@ucl.ac.uk"
-                    },
-                    {
-                      "first_name": "Sebastian",
-                      "last_name": "Schuster",
-                      "order": 4,
-                      "email": "sebastian.schuster@univie.ac.at"
-                    },
-                    {
-                      "first_name": "Andrea",
-                      "last_name": "Santi",
-                      "order": 5,
-                      "email": "a.santi@ucl.ac.uk"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 301,
-                  "title": "Sampling-Based Assumptions Simplify Modeling of Speeded Cloze Response Times",
-                  "authors": [
-                    {
-                      "first_name": "Sathvik",
-                      "last_name": "Nair",
-                      "order": 1,
-                      "email": "sathvik@umd.edu"
-                    },
-                    {
-                      "first_name": "Philip",
-                      "last_name": "Resnik",
-                      "order": 2,
-                      "email": "resnik@umd.edu"
-                    },
-                    {
-                      "first_name": "Colin",
-                      "last_name": "Phillips",
-                      "order": 3,
-                      "email": "colin.phillips@ling-phil.ox.ac.uk"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 28,
@@ -7180,49 +7104,6 @@
                       "last_name": "Martin",
                       "order": 3,
                       "email": "rmartin@rice.edu"
-                    }
-                  ],
-                  "topic": "Neural data (EEG, fMRI, MEG)"
-                },
-                {
-                  "submission_id": 164,
-                  "title": "Language processing demands predict biological brain age: MRI evidence from bilinguals, translators, and interpreters",
-                  "authors": [
-                    {
-                      "first_name": "Mingshi",
-                      "last_name": "Chen",
-                      "order": 1,
-                      "email": "m.chen@amsterdamumc.nl"
-                    },
-                    {
-                      "first_name": "Michal",
-                      "last_name": "Korenar",
-                      "order": 2,
-                      "email": "m.korenar@uva.nl"
-                    },
-                    {
-                      "first_name": "Anouk",
-                      "last_name": "Schrantee",
-                      "order": 3,
-                      "email": "a.g.schrantee@amsterdamumc.nl"
-                    },
-                    {
-                      "first_name": "Henk",
-                      "last_name": "A Marquering",
-                      "order": 4,
-                      "email": "h.a.marquering@amsterdamumc.nl"
-                    },
-                    {
-                      "first_name": "Liesbeth",
-                      "last_name": "Reneman",
-                      "order": 5,
-                      "email": "l.reneman@amsterdamumc.nl"
-                    },
-                    {
-                      "first_name": "Matthan",
-                      "last_name": "Caan",
-                      "order": 6,
-                      "email": "m.w.a.caan@amsterdamumc.nl"
                     }
                   ],
                   "topic": "Neural data (EEG, fMRI, MEG)"
@@ -8557,6 +8438,88 @@
                     }
                   ],
                   "topic": "Bilingualism"
+                },
+                {
+                  "submission_id": 12,
+                  "title": "Eye gaze as a window into good-enough processing: Comprehension of active transitive and suffixal passive constructions by Mandarin-Chinese-speaking learners of Korean",
+                  "authors": [
+                    {
+                      "first_name": "Seongmin",
+                      "last_name": "Mun",
+                      "order": 1,
+                      "email": "seongminmun@knu.ac.kr"
+                    },
+                    {
+                      "first_name": "Gyu-Ho",
+                      "last_name": "Shin",
+                      "order": 2,
+                      "email": "ghshin@uic.edu"
+                    },
+                    {
+                      "first_name": "Sun Hee",
+                      "last_name": "Park",
+                      "order": 3,
+                      "email": "sunheepark@ewha.ac.kr"
+                    }
+                  ],
+                  "topic": "Bilingualism"
+                },
+                {
+                  "submission_id": 179,
+                  "title": "Turning the tables: Exploring implicit causality effects on cataphoric pronouns",
+                  "authors": [
+                    {
+                      "first_name": "JK",
+                      "last_name": "Subramony",
+                      "order": 1,
+                      "email": "jsubramo@usc.edu"
+                    }
+                  ],
+                  "topic": "Semantics & Pragmatics"
+                },
+                {
+                  "submission_id": 108,
+                  "title": "Decision-Making Styles Govern Disfluency Detection in Initial SLA: Challenging Personality-Based Predictions",
+                  "authors": [
+                    {
+                      "first_name": "Jonathan Him Nok",
+                      "last_name": "Lee",
+                      "order": 1,
+                      "email": "jonhnlee@sas.upenn.edu"
+                    },
+                    {
+                      "first_name": "Marlyse",
+                      "last_name": "Baptista",
+                      "order": 2,
+                      "email": "marlyse.baptista@sas.upenn.edu"
+                    },
+                    {
+                      "first_name": "Mark",
+                      "last_name": "Liberman",
+                      "order": 3,
+                      "email": "myl@cis.upenn.edu"
+                    }
+                  ],
+                  "topic": "Phonology & Prosody"
+                },
+                {
+                  "submission_id": 146,
+                  "title": "Online processing of morphosyntactic cues by native and non-native Korean speakers: An eye-tracking study",
+                  "authors": [
+                    {
+                      "first_name": "Jeonghwa",
+                      "last_name": "Cho",
+                      "order": 1,
+                      "email": "jhcho@hongik.ac.kr"
+                    },
+                    {
+                      "first_name": "Gyu-Ho",
+                      "last_name": "Shin",
+                      "order": 2,
+                      "email": "ghshin@uic.edu"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
                 }
               ]
             }
