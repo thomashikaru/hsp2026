@@ -802,6 +802,75 @@
                   "topic": "Semantics & Pragmatics"
                 },
                 {
+                  "submission_id": 94,
+                  "title": "QUD variability in naturalistic discourse predicts scalar inference variability",
+                  "authors": [
+                    {
+                      "first_name": "Xuetong",
+                      "last_name": "Yuan",
+                      "order": 1,
+                      "email": "xuetongyuan@uchicago.edu"
+                    },
+                    {
+                      "first_name": "Minjae",
+                      "last_name": "Joh",
+                      "order": 2,
+                      "email": "johminjae@uchicago.edu"
+                    },
+                    {
+                      "first_name": "Ming",
+                      "last_name": "Xiang",
+                      "order": 3,
+                      "email": "mxming@gmail.com"
+                    }
+                  ],
+                  "topic": "Semantics & Pragmatics"
+                },
+                {
+                  "submission_id": 24,
+                  "title": "Semantic prediction is hierarchical",
+                  "authors": [
+                    {
+                      "first_name": "Cassandra",
+                      "last_name": "Jacobs",
+                      "order": 1,
+                      "email": "cxjacobs@buffalo.edu"
+                    },
+                    {
+                      "first_name": "Morgan",
+                      "last_name": "Grobol",
+                      "order": 2,
+                      "email": "lgrobol@parisnanterre.fr"
+                    },
+                    {
+                      "first_name": "Ryan",
+                      "last_name": "Hubbard",
+                      "order": 3,
+                      "email": "rhubbard2@albany.edu"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 345,
+                  "title": "Processing effects obscure grammatical analyses in multiple gap constructions",
+                  "authors": [
+                    {
+                      "first_name": "Katherine",
+                      "last_name": "Howitt",
+                      "order": 1,
+                      "email": "kghowitt@umd.edu"
+                    },
+                    {
+                      "first_name": "Aron",
+                      "last_name": "Hirsch",
+                      "order": 2,
+                      "email": "hirsch@umd.edu"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
                   "submission_id": 39,
                   "title": "With Subjects, Italian Relative Clauses Attach Low",
                   "authors": [
@@ -5466,156 +5535,6 @@
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 94,
-                  "title": "QUD variability in naturalistic discourse predicts scalar inference variability",
-                  "authors": [
-                    {
-                      "first_name": "Xuetong",
-                      "last_name": "Yuan",
-                      "order": 1,
-                      "email": "xuetongyuan@uchicago.edu"
-                    },
-                    {
-                      "first_name": "Minjae",
-                      "last_name": "Joh",
-                      "order": 2,
-                      "email": "johminjae@uchicago.edu"
-                    },
-                    {
-                      "first_name": "Ming",
-                      "last_name": "Xiang",
-                      "order": 3,
-                      "email": "mxming@gmail.com"
-                    }
-                  ],
-                  "topic": "Semantics & Pragmatics"
-                },
-                {
-                  "submission_id": 116,
-                  "title": "Language-Specific Transfer of Musical Skills: How Melody, Rhythm, and Accent Shape L2 Pronunciation Across Prosodic Systems",
-                  "authors": [
-                    {
-                      "first_name": "Sara",
-                      "last_name": "Ferini",
-                      "order": 1,
-                      "email": "ferini.sara@spes.uniud.it"
-                    },
-                    {
-                      "first_name": "Paolo",
-                      "last_name": "Lorusso",
-                      "order": 2,
-                      "email": "paolo.lorusso@uniud.it"
-                    }
-                  ],
-                  "topic": "Phonology & Prosody"
-                },
-                {
-                  "submission_id": 24,
-                  "title": "Semantic prediction is hierarchical",
-                  "authors": [
-                    {
-                      "first_name": "Cassandra",
-                      "last_name": "Jacobs",
-                      "order": 1,
-                      "email": "cxjacobs@buffalo.edu"
-                    },
-                    {
-                      "first_name": "Morgan",
-                      "last_name": "Grobol",
-                      "order": 2,
-                      "email": "lgrobol@parisnanterre.fr"
-                    },
-                    {
-                      "first_name": "Ryan",
-                      "last_name": "Hubbard",
-                      "order": 3,
-                      "email": "rhubbard2@albany.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 162,
-                  "title": "Gone without a Trace: Why 5 LMs Fail to Track Non-Local Dependency Resolution",
-                  "authors": [
-                    {
-                      "first_name": "Liliana",
-                      "last_name": "Nentcheva",
-                      "order": 1,
-                      "email": "lily.nentcheva.15@ucl.ac.uk"
-                    },
-                    {
-                      "first_name": "Donald",
-                      "last_name": "Dunagan",
-                      "order": 2,
-                      "email": "ddunaga1@jh.edu"
-                    },
-                    {
-                      "first_name": "Milos",
-                      "last_name": "Stanojevic",
-                      "order": 3,
-                      "email": "m.stanojevic@ucl.ac.uk"
-                    },
-                    {
-                      "first_name": "Sebastian",
-                      "last_name": "Schuster",
-                      "order": 4,
-                      "email": "sebastian.schuster@univie.ac.at"
-                    },
-                    {
-                      "first_name": "Andrea",
-                      "last_name": "Santi",
-                      "order": 5,
-                      "email": "a.santi@ucl.ac.uk"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 345,
-                  "title": "Processing effects obscure grammatical analyses in multiple gap constructions",
-                  "authors": [
-                    {
-                      "first_name": "Katherine",
-                      "last_name": "Howitt",
-                      "order": 1,
-                      "email": "kghowitt@umd.edu"
-                    },
-                    {
-                      "first_name": "Aron",
-                      "last_name": "Hirsch",
-                      "order": 2,
-                      "email": "hirsch@umd.edu"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
-                  "submission_id": 301,
-                  "title": "Sampling-Based Assumptions Simplify Modeling of Speeded Cloze Response Times",
-                  "authors": [
-                    {
-                      "first_name": "Sathvik",
-                      "last_name": "Nair",
-                      "order": 1,
-                      "email": "sathvik@umd.edu"
-                    },
-                    {
-                      "first_name": "Philip",
-                      "last_name": "Resnik",
-                      "order": 2,
-                      "email": "resnik@umd.edu"
-                    },
-                    {
-                      "first_name": "Colin",
-                      "last_name": "Phillips",
-                      "order": 3,
-                      "email": "colin.phillips@ling-phil.ox.ac.uk"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 }
               ]
             }
@@ -6238,6 +6157,68 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 162,
+                  "title": "Gone without a Trace: Why 5 LMs Fail to Track Non-Local Dependency Resolution",
+                  "authors": [
+                    {
+                      "first_name": "Liliana",
+                      "last_name": "Nentcheva",
+                      "order": 1,
+                      "email": "lily.nentcheva.15@ucl.ac.uk"
+                    },
+                    {
+                      "first_name": "Donald",
+                      "last_name": "Dunagan",
+                      "order": 2,
+                      "email": "ddunaga1@jh.edu"
+                    },
+                    {
+                      "first_name": "Milos",
+                      "last_name": "Stanojevic",
+                      "order": 3,
+                      "email": "m.stanojevic@ucl.ac.uk"
+                    },
+                    {
+                      "first_name": "Sebastian",
+                      "last_name": "Schuster",
+                      "order": 4,
+                      "email": "sebastian.schuster@univie.ac.at"
+                    },
+                    {
+                      "first_name": "Andrea",
+                      "last_name": "Santi",
+                      "order": 5,
+                      "email": "a.santi@ucl.ac.uk"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 301,
+                  "title": "Sampling-Based Assumptions Simplify Modeling of Speeded Cloze Response Times",
+                  "authors": [
+                    {
+                      "first_name": "Sathvik",
+                      "last_name": "Nair",
+                      "order": 1,
+                      "email": "sathvik@umd.edu"
+                    },
+                    {
+                      "first_name": "Philip",
+                      "last_name": "Resnik",
+                      "order": 2,
+                      "email": "resnik@umd.edu"
+                    },
+                    {
+                      "first_name": "Colin",
+                      "last_name": "Phillips",
+                      "order": 3,
+                      "email": "colin.phillips@ling-phil.ox.ac.uk"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 28,
@@ -8520,6 +8501,25 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 116,
+                  "title": "Language-Specific Transfer of Musical Skills: How Melody, Rhythm, and Accent Shape L2 Pronunciation Across Prosodic Systems",
+                  "authors": [
+                    {
+                      "first_name": "Sara",
+                      "last_name": "Ferini",
+                      "order": 1,
+                      "email": "ferini.sara@spes.uniud.it"
+                    },
+                    {
+                      "first_name": "Paolo",
+                      "last_name": "Lorusso",
+                      "order": 2,
+                      "email": "paolo.lorusso@uniud.it"
+                    }
+                  ],
+                  "topic": "Phonology & Prosody"
                 }
               ]
             }
