@@ -34,10 +34,68 @@
             margin-bottom: 1rem;
         }
 
+        .schedule-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1.25rem;
+            margin-bottom: 1rem;
+            margin-top: 0.25rem;
+            padding: 1.1rem 1.5rem;
+            background: #f8fafc;
+            border: 1px solid #e8ecf0;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
         .day-selector {
             display: flex;
             align-items: center;
             gap: 1rem;
+        }
+
+        .full-schedule-print-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            padding: 0.15rem 0 0.15rem 0.75rem;
+            border-left: 1px solid #e2e8f0;
+            min-width: 0;
+        }
+
+        .full-schedule-pdf-btn {
+            padding: 0.65rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 2px solid #4a90e2;
+            border-radius: 6px;
+            background: #4a90e2;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .full-schedule-pdf-btn:hover {
+            background: #3a7bc8;
+            border-color: #3a7bc8;
+        }
+
+        .full-schedule-pdf-hint {
+            font-size: 0.8rem;
+            color: #777;
+            max-width: 220px;
+            line-height: 1.35;
+        }
+
+        @media (max-width: 720px) {
+            .full-schedule-print-wrap {
+                border-left: none;
+                border-top: 1px solid #e2e8f0;
+                padding-left: 0;
+                padding-top: 0.85rem;
+                width: 100%;
+            }
         }
 
         .day-selector label {
@@ -416,18 +474,329 @@
                 max-width: 100%;
             }
         }
+
+        .print-day-block {
+            margin-top: 1.5rem;
+        }
+
+        .print-day-block:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Full-schedule / print preview: day strips should jump out when scanning */
+        .print-day-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fff;
+            background: #750014;
+            margin: 0 0 1rem 0;
+            padding: 0.65rem 1rem;
+            border: none;
+            border-radius: 6px;
+            border-bottom: 4px solid #5c0010;
+            page-break-after: avoid;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .print-day-block:not(:first-of-type) .print-day-title {
+            page-break-before: always;
+        }
+
+        @media print {
+            @page {
+                margin: 0.45in 0.5in;
+                size: letter;
+            }
+
+            .schedule-screen-only {
+                display: none !important;
+            }
+
+            body,
+            #schedule-content-container {
+                background: white !important;
+                padding: 0 !important;
+                max-width: none !important;
+                font-size: 9pt !important;
+                line-height: 1.28 !important;
+                color: #111 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            header {
+                margin-bottom: 0.35rem !important;
+                padding-bottom: 0.35rem !important;
+                border-bottom: 1px solid #999 !important;
+            }
+
+            header h1 {
+                font-size: 14pt !important;
+                font-weight: 600 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .print-day-title {
+                font-size: 17pt !important;
+                font-weight: 800 !important;
+                letter-spacing: 0.1em !important;
+                text-transform: uppercase !important;
+                color: #fff !important;
+                background: #750014 !important;
+                margin: 0.5rem 0 0.45rem 0 !important;
+                padding: 0.22in 0.28in !important;
+                border: none !important;
+                border-radius: 0 !important;
+                border-bottom: 5px solid #4a0010 !important;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .print-day-block:first-of-type .print-day-title {
+                margin-top: 0.15rem !important;
+            }
+
+            .print-day-block:not(:first-of-type) .print-day-title {
+                page-break-before: always !important;
+                margin-top: 0 !important;
+            }
+
+            .schedule-container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                overflow: visible !important;
+            }
+
+            .pre-events {
+                border-bottom: 1px solid #ccc !important;
+            }
+
+            .session {
+                border-bottom: 1px solid #bbb !important;
+                overflow: visible !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+
+            .events-list {
+                overflow: visible !important;
+            }
+
+            .session-header {
+                padding: 0.28rem 0.4rem !important;
+                background: #eaeaea !important;
+                border-bottom: 1px solid #bbb !important;
+            }
+
+            .session-title {
+                font-size: 9.5pt !important;
+                font-weight: 700 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .session-time {
+                font-size: 8pt !important;
+            }
+
+            /* Keep short talks/breaks intact; poster sessions are huge — must allow breaks or print engines add blank pages */
+            .event:not(.poster) {
+                padding: 0.15rem 0.35rem !important;
+                border-bottom: 1px solid #e5e5e5 !important;
+                background: white !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .event.poster {
+                padding: 0.15rem 0.35rem !important;
+                border-bottom: 1px solid #e5e5e5 !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+                cursor: default !important;
+                overflow: visible !important;
+                height: auto !important;
+                max-height: none !important;
+                min-height: 0 !important;
+            }
+
+            /* Flex rows are a common source of bad print fragmentation; stack header for poster blocks */
+            .event.poster .event-header {
+                display: block !important;
+            }
+
+            .event.poster .event-time {
+                margin-bottom: 0.12rem !important;
+            }
+
+            .event.break,
+            .event.introduction,
+            .event.poster {
+                background: #f7f7f7 !important;
+                border-left: 2px solid #bbb !important;
+            }
+
+            .event-header {
+                gap: 0.35rem !important;
+                margin-bottom: 0.08rem !important;
+                align-items: baseline !important;
+            }
+
+            .event-time {
+                min-width: 5.6em !important;
+                font-size: 8.5pt !important;
+                font-weight: 600 !important;
+            }
+
+            .event-content {
+                margin-left: 0 !important;
+            }
+
+            .event-type {
+                font-size: 7.5pt !important;
+                letter-spacing: 0.02em !important;
+                margin-bottom: 0.05rem !important;
+            }
+
+            .abstract-id {
+                padding: 0.06rem 0.28rem !important;
+                font-size: 7.5pt !important;
+                margin-bottom: 0.08rem !important;
+            }
+
+            .abstract-pdf-link {
+                display: none !important;
+            }
+
+            /* Invited-talk blurbs are very long; omit from print — use the website for full text */
+            .abstract-text {
+                display: none !important;
+            }
+
+            .event-title {
+                font-size: 9.5pt !important;
+                line-height: 1.28 !important;
+                margin-bottom: 0.1rem !important;
+            }
+
+            .event.break .event-title {
+                font-size: 9pt !important;
+            }
+
+            .authors {
+                margin-top: 0.12rem !important;
+            }
+
+            .authors-label {
+                display: inline !important;
+                font-size: 8pt !important;
+                margin-right: 0.2rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            .author-list {
+                display: inline !important;
+                flex-wrap: unset !important;
+                gap: 0 !important;
+            }
+
+            .author {
+                display: inline !important;
+                padding: 0 !important;
+                background: transparent !important;
+                border-radius: 0 !important;
+                font-size: 8pt !important;
+            }
+
+            .author + .author::before {
+                content: " · " !important;
+            }
+
+            .speaker,
+            .topic,
+            .location {
+                font-size: 8pt !important;
+                margin-top: 0.06rem !important;
+            }
+
+            .expand-icon {
+                display: none !important;
+            }
+
+            /*
+             * Do NOT use CSS multi-column layout in print: Chrome/Safari often leave
+             * huge blank regions or extra pages after tall column flows.
+             */
+            .event.poster .poster-list {
+                display: block !important;
+                margin-top: 0.2rem !important;
+                padding-top: 0.2rem !important;
+                border-top: 1px solid #ccc !important;
+                column-count: unset !important;
+                column-gap: unset !important;
+                column-fill: unset !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+                overflow: visible !important;
+            }
+
+            .poster-item {
+                /* avoid + multi-column often leaves huge trailing gaps / extra pages in Chrome print */
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+                padding: 0.12rem 0.22rem !important;
+                margin-bottom: 0.15rem !important;
+                background: white !important;
+                border-left-width: 2px !important;
+            }
+
+            .poster-item .abstract-id {
+                margin-bottom: 0.05rem !important;
+                margin-right: 0.15rem !important;
+            }
+
+            .poster-title {
+                font-size: 8.5pt !important;
+                margin-bottom: 0.04rem !important;
+                line-height: 1.25 !important;
+            }
+
+            .poster-authors {
+                font-size: 7.5pt !important;
+                line-height: 1.25 !important;
+            }
+
+            .poster-authors-label {
+                font-weight: 600 !important;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>HSP Conference Schedule</h1>
-        <div class="day-selector">
-            <label for="daySelect">Select Day:</label>
-            <select id="daySelect">
-                <option value="">Loading...</option>
-            </select>
+        <div class="schedule-toolbar schedule-screen-only">
+            <div class="day-selector">
+                <label for="daySelect">Select Day:</label>
+                <select id="daySelect">
+                    <option value="">Loading...</option>
+                </select>
+            </div>
+            <div class="full-schedule-print-wrap">
+                <button type="button" id="fullSchedulePdfBtn" class="full-schedule-pdf-btn">Save full schedule (PDF)</button>
+                <span class="full-schedule-pdf-hint">Opens your browser’s print dialog — choose <strong>Save as PDF</strong> as the destination.</span>
+            </div>
         </div>
-        <div class="search-container">
+        <div class="search-container schedule-screen-only">
             <input type="text" id="searchBar" class="search-bar" placeholder="Search by title, author, abstract ID, or topic...">
         </div>
     </header>
@@ -438,9 +807,12 @@
 
     <script>
         let scheduleData = null;
+        const SCHEDULE_DAY_ORDER = ['thursday', 'friday', 'saturday'];
         const daySelect = document.getElementById('daySelect');
         const scheduleContainer = document.getElementById('scheduleContainer');
         const searchBar = document.getElementById('searchBar');
+
+        document.getElementById('fullSchedulePdfBtn').addEventListener('click', printFullSchedulePdf);
 
         // Load schedule data
         fetch('schedule.json')
@@ -485,10 +857,19 @@
             return day.charAt(0).toUpperCase() + day.slice(1);
         }
 
-        function displayDay(dayKey) {
+        function getOrderedDayKeys() {
+            if (!scheduleData || !scheduleData.days) return [];
+            const keys = Object.keys(scheduleData.days);
+            const ordered = SCHEDULE_DAY_ORDER.filter(k => keys.includes(k));
+            keys.forEach(k => {
+                if (!ordered.includes(k)) ordered.push(k);
+            });
+            return ordered;
+        }
+
+        function buildDayHtml(dayKey) {
             if (!scheduleData || !scheduleData.days[dayKey]) {
-                scheduleContainer.innerHTML = '<div class="error">Day not found</div>';
-                return;
+                return '<div class="error">Day not found</div>';
             }
 
             const day = scheduleData.days[dayKey];
@@ -536,8 +917,12 @@
                 html += '</div></div>'; // Close last session
             }
 
-            scheduleContainer.innerHTML = html;
-            
+            return html;
+        }
+
+        function displayDay(dayKey) {
+            scheduleContainer.innerHTML = buildDayHtml(dayKey);
+
             // Add click handlers for poster sessions
             document.querySelectorAll('.event.poster').forEach(posterEvent => {
                 posterEvent.addEventListener('click', function() {
@@ -549,6 +934,42 @@
             if (searchBar.value) {
                 filterSchedule(searchBar.value);
             }
+        }
+
+        function printFullSchedulePdf() {
+            if (!scheduleData || !scheduleData.days) return;
+
+            const savedDayKey = daySelect.value;
+            let restored = false;
+
+            const restore = () => {
+                if (restored) return;
+                restored = true;
+                document.body.classList.remove('printing-full-schedule');
+                daySelect.value = savedDayKey;
+                displayDay(savedDayKey);
+            };
+
+            const parts = [];
+            getOrderedDayKeys().forEach(dayKey => {
+                parts.push(
+                    `<section class="print-day-block"><h2 class="print-day-title">${capitalizeDay(dayKey)}</h2>${buildDayHtml(dayKey)}</section>`
+                );
+            });
+            scheduleContainer.innerHTML = parts.join('');
+            document.body.classList.add('printing-full-schedule');
+
+            document.querySelectorAll('.event.poster').forEach(el => {
+                el.classList.add('expanded');
+            });
+
+            window.addEventListener('afterprint', restore, { once: true });
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    window.print();
+                });
+            });
         }
 
         function filterSchedule(searchTerm) {

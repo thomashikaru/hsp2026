@@ -199,6 +199,34 @@
                 gap: 0.5rem;
             }
         }
+
+        @media print {
+            .navbar,
+            .footer {
+                display: none !important;
+            }
+
+            .schedule-hero {
+                padding: 0.35rem 0 0.25rem !important;
+                background: white !important;
+                color: #1f2937 !important;
+            }
+
+            .schedule-hero h1 {
+                color: #1f2937 !important;
+                font-size: 13pt !important;
+                font-weight: 600 !important;
+            }
+
+            .schedule-section {
+                padding: 0 !important;
+            }
+
+            .schedule-section .container {
+                max-width: none !important;
+                padding: 0 0.15in !important;
+            }
+        }
     </style>
 </head>
 <body>
