@@ -890,6 +890,55 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
+                  "submission_id": 341,
+                  "title": "Facilitative Processing of Gender in the Absence of Overt Agreement Morphology in Heritage Spanish Speakers",
+                  "authors": [
+                    {
+                      "first_name": "Esra",
+                      "last_name": "Eldem Tunc",
+                      "order": 1,
+                      "email": "eeldem@usc.edu"
+                    },
+                    {
+                      "first_name": "Leo",
+                      "last_name": "Mermelstein",
+                      "order": 2,
+                      "email": "lmermels@usc.edu"
+                    },
+                    {
+                      "first_name": "Metehan",
+                      "last_name": "Oguz",
+                      "order": 3,
+                      "email": "moguz@usc.edu"
+                    },
+                    {
+                      "first_name": "Julian",
+                      "last_name": "Patino",
+                      "order": 4,
+                      "email": "jdpatino@usc.edu"
+                    },
+                    {
+                      "first_name": "JK",
+                      "last_name": "Subramony",
+                      "order": 5,
+                      "email": "jsubramo@usc.edu"
+                    },
+                    {
+                      "first_name": "Seoyoon",
+                      "last_name": "Hong",
+                      "order": 6,
+                      "email": "seoyoonh@usc.edu"
+                    },
+                    {
+                      "first_name": "Zuzanna",
+                      "last_name": "Fuchs",
+                      "order": 7,
+                      "email": "zfuchs@usc.edu"
+                    }
+                  ],
+                  "topic": "Bilingualism"
+                },
+                {
                   "submission_id": 318,
                   "title": "How Semantics Interacts with Emotional Prosody in the Bilingual Brain?",
                   "authors": [
@@ -1394,6 +1443,25 @@
                   "topic": "Semantics & Pragmatics"
                 },
                 {
+                  "submission_id": 6,
+                  "title": "Sentential negation causes illusory licensing of both NPIs and NCIs in Czech",
+                  "authors": [
+                    {
+                      "first_name": "Radim",
+                      "last_name": "Lacina",
+                      "order": 1,
+                      "email": "rlacina@mail.muni.cz"
+                    },
+                    {
+                      "first_name": "Mojmír",
+                      "last_name": "Dočekal",
+                      "order": 2,
+                      "email": "docekal@phil.muni.cz"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
+                },
+                {
                   "submission_id": 175,
                   "title": "Immediate Recall, Later Word Recognition, and Information Congruency in Reading and Listening Comprehension",
                   "authors": [
@@ -1867,25 +1935,6 @@
                   "topic": "Syntax & Morphology"
                 },
                 {
-                  "submission_id": 43,
-                  "title": "Winograd-schema without world knowledge: Minimal post-pronoun semantics modulate the implicit causality pronoun bias",
-                  "authors": [
-                    {
-                      "first_name": "Amanda",
-                      "last_name": "Yuile",
-                      "order": 1,
-                      "email": "ayuile@mghihp.edu"
-                    },
-                    {
-                      "first_name": "Joshua",
-                      "last_name": "Hartshorne",
-                      "order": 2,
-                      "email": "joshua.hartshorne@hey.com"
-                    }
-                  ],
-                  "topic": "Semantics & Pragmatics"
-                },
-                {
                   "submission_id": 286,
                   "title": "When the bucket is kicked flat: Resultatives and the time course of idiom processing",
                   "authors": [
@@ -2256,31 +2305,6 @@
                     }
                   ],
                   "topic": "Developmental / Child Language Acquisition"
-                },
-                {
-                  "submission_id": 342,
-                  "title": "Readers make targeted regressions to likely word errors in noisy-channel garden paths",
-                  "authors": [
-                    {
-                      "first_name": "Thomas",
-                      "last_name": "Clark",
-                      "order": 1,
-                      "email": "thclark@mit.edu"
-                    },
-                    {
-                      "first_name": "Roger",
-                      "last_name": "Levy",
-                      "order": 2,
-                      "email": "rplevy@mit.edu"
-                    },
-                    {
-                      "first_name": "Edward",
-                      "last_name": "Gibson",
-                      "order": 3,
-                      "email": "egibson@mit.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 344,
@@ -3472,6 +3496,31 @@
                     }
                   ],
                   "topic": "Bilingualism"
+                },
+                {
+                  "submission_id": 342,
+                  "title": "Readers make targeted regressions to likely word errors in noisy-channel garden paths",
+                  "authors": [
+                    {
+                      "first_name": "Thomas",
+                      "last_name": "Clark",
+                      "order": 1,
+                      "email": "thclark@mit.edu"
+                    },
+                    {
+                      "first_name": "Roger",
+                      "last_name": "Levy",
+                      "order": 2,
+                      "email": "rplevy@mit.edu"
+                    },
+                    {
+                      "first_name": "Edward",
+                      "last_name": "Gibson",
+                      "order": 3,
+                      "email": "egibson@mit.edu"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 303,
@@ -5336,25 +5385,6 @@
                   "topic": "Language impairments (e.g. aphasia)"
                 },
                 {
-                  "submission_id": 6,
-                  "title": "Sentential negation causes illusory licensing of both NPIs and NCIs in Czech",
-                  "authors": [
-                    {
-                      "first_name": "Radim",
-                      "last_name": "Lacina",
-                      "order": 1,
-                      "email": "rlacina@mail.muni.cz"
-                    },
-                    {
-                      "first_name": "Mojmír",
-                      "last_name": "Dočekal",
-                      "order": 2,
-                      "email": "docekal@phil.muni.cz"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 332,
                   "title": "Investigating Speech Production in Aphasia: A Usage-Based Approach",
                   "authors": [
@@ -6510,6 +6540,25 @@
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
+                  "submission_id": 43,
+                  "title": "Winograd-schema without world knowledge: Minimal post-pronoun semantics modulate the implicit causality pronoun bias",
+                  "authors": [
+                    {
+                      "first_name": "Amanda",
+                      "last_name": "Yuile",
+                      "order": 1,
+                      "email": "ayuile@mghihp.edu"
+                    },
+                    {
+                      "first_name": "Joshua",
+                      "last_name": "Hartshorne",
+                      "order": 2,
+                      "email": "joshua.hartshorne@hey.com"
+                    }
+                  ],
+                  "topic": "Semantics & Pragmatics"
+                },
+                {
                   "submission_id": 152,
                   "title": "LLMs predict metaphor norms based on word co-occurrence but struggle with relational and sensory dimensions",
                   "authors": [
@@ -6564,55 +6613,6 @@
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
-                  "submission_id": 341,
-                  "title": "Facilitative Processing of Gender in the Absence of Overt Agreement Morphology in Heritage Spanish Speakers",
-                  "authors": [
-                    {
-                      "first_name": "Esra",
-                      "last_name": "Eldem Tunc",
-                      "order": 1,
-                      "email": "eeldem@usc.edu"
-                    },
-                    {
-                      "first_name": "Leo",
-                      "last_name": "Mermelstein",
-                      "order": 2,
-                      "email": "lmermels@usc.edu"
-                    },
-                    {
-                      "first_name": "Metehan",
-                      "last_name": "Oguz",
-                      "order": 3,
-                      "email": "moguz@usc.edu"
-                    },
-                    {
-                      "first_name": "Julian",
-                      "last_name": "Patino",
-                      "order": 4,
-                      "email": "jdpatino@usc.edu"
-                    },
-                    {
-                      "first_name": "JK",
-                      "last_name": "Subramony",
-                      "order": 5,
-                      "email": "jsubramo@usc.edu"
-                    },
-                    {
-                      "first_name": "Seoyoon",
-                      "last_name": "Hong",
-                      "order": 6,
-                      "email": "seoyoonh@usc.edu"
-                    },
-                    {
-                      "first_name": "Zuzanna",
-                      "last_name": "Fuchs",
-                      "order": 7,
-                      "email": "zfuchs@usc.edu"
-                    }
-                  ],
-                  "topic": "Bilingualism"
                 },
                 {
                   "submission_id": 117,
