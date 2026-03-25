@@ -696,25 +696,6 @@
                   "topic": "Bilingualism"
                 },
                 {
-                  "submission_id": 328,
-                  "title": "How do gender, number and case differ and why?",
-                  "authors": [
-                    {
-                      "first_name": "Daria",
-                      "last_name": "Antropova",
-                      "order": 1,
-                      "email": "daria.antropos@gmail.com"
-                    },
-                    {
-                      "first_name": "Natalia",
-                      "last_name": "Slioussar",
-                      "order": 2,
-                      "email": "slioussar@gmail.com"
-                    }
-                  ],
-                  "topic": "Syntax & Morphology"
-                },
-                {
                   "submission_id": 354,
                   "title": "(In)sensitivity to surface-level heuristics: A case from Turkish verbal attractors",
                   "authors": [
@@ -4790,6 +4771,25 @@
                     }
                   ],
                   "topic": "Neural data (EEG, fMRI, MEG)"
+                },
+                {
+                  "submission_id": 328,
+                  "title": "How do gender, number and case differ and why?",
+                  "authors": [
+                    {
+                      "first_name": "Daria",
+                      "last_name": "Antropova",
+                      "order": 1,
+                      "email": "daria.antropos@gmail.com"
+                    },
+                    {
+                      "first_name": "Natalia",
+                      "last_name": "Slioussar",
+                      "order": 2,
+                      "email": "slioussar@gmail.com"
+                    }
+                  ],
+                  "topic": "Syntax & Morphology"
                 },
                 {
                   "submission_id": 337,
