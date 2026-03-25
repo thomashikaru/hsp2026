@@ -1094,25 +1094,6 @@
                   "topic": "Semantics & Pragmatics"
                 },
                 {
-                  "submission_id": 379,
-                  "title": "Resampling in Particle Filter Models Produces Online Digging-In Effects",
-                  "authors": [
-                    {
-                      "first_name": "Amani",
-                      "last_name": "Maina-Kilaas",
-                      "order": 1,
-                      "email": "amanirmk@mit.edu"
-                    },
-                    {
-                      "first_name": "Roger",
-                      "last_name": "Levy",
-                      "order": 2,
-                      "email": "rplevy@mit.edu"
-                    }
-                  ],
-                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
-                },
-                {
                   "submission_id": 207,
                   "title": "Does disfluency rate affect feelings towards the speaker? A computational analysis of listener sentiment",
                   "authors": [
@@ -4595,6 +4576,25 @@
                     }
                   ],
                   "topic": "Syntax & Morphology"
+                },
+                {
+                  "submission_id": 379,
+                  "title": "Resampling in Particle Filter Models Produces Online Digging-In Effects",
+                  "authors": [
+                    {
+                      "first_name": "Amani",
+                      "last_name": "Maina-Kilaas",
+                      "order": 1,
+                      "email": "amanirmk@mit.edu"
+                    },
+                    {
+                      "first_name": "Roger",
+                      "last_name": "Levy",
+                      "order": 2,
+                      "email": "rplevy@mit.edu"
+                    }
+                  ],
+                  "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
                   "submission_id": 22,
