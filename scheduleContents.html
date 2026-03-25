@@ -317,6 +317,16 @@
             text-decoration: underline;
         }
 
+        .poster-slides-pdf-link {
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+            color: #4a90e2;
+        }
+
+        .poster-slides-pdf-link:hover {
+            text-decoration: underline;
+        }
+
         .event-title {
             font-size: 1.15rem;
             font-weight: 500;
@@ -808,13 +818,14 @@
     <script>
         let scheduleData = null;
         const SCHEDULE_DAY_ORDER = ['thursday', 'friday', 'saturday'];
+        const posterSlidesAvailableIds = new Set();
         const daySelect = document.getElementById('daySelect');
         const scheduleContainer = document.getElementById('scheduleContainer');
         const searchBar = document.getElementById('searchBar');
 
         document.getElementById('fullSchedulePdfBtn').addEventListener('click', printFullSchedulePdf);
 
-        // Load schedule data
+        // Load schedule data and discover which standardized poster/slides PDFs exist.
         fetch('schedule.json')
             .then(response => {
                 if (!response.ok) {
@@ -822,6 +833,7 @@
                 }
                 return response.json();
             })
+            .then(data => loadPosterSlidesAvailability(data).then(() => data))
             .then(data => {
                 scheduleData = data;
                 populateDaySelector();
@@ -1160,7 +1172,7 @@
             }
 
             if (event.abstract_id) {
-                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span> <a href="abstracts/submission_${parseInt(event.abstract_id, 10)}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                html += `<span class="abstract-id">Abstract #${event.abstract_id}</span>${renderPdfLinks(event.abstract_id)}`;
             }
 
             if (event.title) {
@@ -1207,7 +1219,7 @@
                     html += '<div class="poster-item">';
                     // Add abstract number badge (like talks have)
                     if (poster.submission_id) {
-                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span> <a href="abstracts/submission_${poster.submission_id}.pdf" class="abstract-pdf-link" target="_blank" rel="noopener">PDF</a>`;
+                        html += `<span class="abstract-id">Abstract #${poster.submission_id}</span>${renderPdfLinks(poster.submission_id)}`;
                     }
                     html += `<div class="poster-title">${escapeHtml(poster.title)}</div>`;
                     if (poster.authors && poster.authors.length > 0) {
@@ -1221,6 +1233,71 @@
 
             html += '</div></div></div>';
             return html;
+        }
+
+        function loadPosterSlidesAvailability(data) {
+            const ids = collectPosterSlidesCandidateIds(data);
+            const checks = ids.map(id => checkPosterSlidesFileExists(id).then(exists => ({ id, exists })));
+            return Promise.all(checks)
+                .then(results => {
+                    results.forEach(result => {
+                        if (result.exists) {
+                            posterSlidesAvailableIds.add(result.id);
+                        }
+                    });
+                })
+                .catch(() => undefined);
+        }
+
+        function collectPosterSlidesCandidateIds(data) {
+            if (!data || !data.days) return [];
+            const ids = new Set();
+
+            Object.values(data.days).forEach(day => {
+                (day.sessions || []).forEach(session => {
+                    (session.events || []).forEach(event => {
+                        if (event.abstract_id) {
+                            ids.add(String(parseInt(event.abstract_id, 10)));
+                        }
+                        (event.posters || []).forEach(poster => {
+                            if (poster.submission_id) {
+                                ids.add(String(parseInt(poster.submission_id, 10)));
+                            }
+                        });
+                    });
+                });
+            });
+
+            return Array.from(ids);
+        }
+
+        function checkPosterSlidesFileExists(abstractId) {
+            const normalizedId = parseInt(abstractId, 10);
+            const url = `posters/upload_${normalizedId}.pdf`;
+
+            return fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) return true;
+                    if (response.status !== 405 && response.status !== 501) return false;
+                    return fetch(url, { method: 'GET' }).then(getResponse => getResponse.ok);
+                })
+                .catch(() => false);
+        }
+
+        function getPosterSlidesHref(abstractId) {
+            const id = String(parseInt(abstractId, 10));
+            if (!posterSlidesAvailableIds.has(id)) return null;
+            return `posters/upload_${parseInt(id, 10)}.pdf`;
+        }
+
+        function renderPdfLinks(abstractId) {
+            const normalizedId = parseInt(abstractId, 10);
+            const abstractHref = `abstracts/submission_${normalizedId}.pdf`;
+            const posterSlidesHref = getPosterSlidesHref(abstractId);
+            const posterSlidesLink = posterSlidesHref
+                ? `<a href="${posterSlidesHref}" class="poster-slides-pdf-link" target="_blank" rel="noopener">Poster/Slides PDF</a>`
+                : '';
+            return ` <a href="${abstractHref}" class="abstract-pdf-link" target="_blank" rel="noopener">Abstract PDF</a>${posterSlidesLink}`;
         }
 
         function formatTime(timeStr) {
