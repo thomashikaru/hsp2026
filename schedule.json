@@ -2450,25 +2450,6 @@
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
                 },
                 {
-                  "submission_id": 350,
-                  "title": "Impact of Information Structure on Comprehension of the Inverse Verb Form in Ojibwe",
-                  "authors": [
-                    {
-                      "first_name": "Marcella",
-                      "last_name": "Jurotich",
-                      "order": 1,
-                      "email": "mjuro@student.ubc.ca"
-                    },
-                    {
-                      "first_name": "Christopher",
-                      "last_name": "Hammerly",
-                      "order": 2,
-                      "email": "chris.hammerly@ubc.ca"
-                    }
-                  ],
-                  "topic": "Semantics & Pragmatics"
-                },
-                {
                   "submission_id": 232,
                   "title": "Preactivation and Probabilistic Inference Coexist during Sentence Comprehension",
                   "authors": [
@@ -4400,6 +4381,25 @@
                     }
                   ],
                   "topic": "Computational models (e.g. LLMs, information-theoretic models)"
+                },
+                {
+                  "submission_id": 350,
+                  "title": "Impact of Information Structure on Comprehension of the Inverse Verb Form in Ojibwe",
+                  "authors": [
+                    {
+                      "first_name": "Marcella",
+                      "last_name": "Jurotich",
+                      "order": 1,
+                      "email": "mjuro@student.ubc.ca"
+                    },
+                    {
+                      "first_name": "Christopher",
+                      "last_name": "Hammerly",
+                      "order": 2,
+                      "email": "chris.hammerly@ubc.ca"
+                    }
+                  ],
+                  "topic": "Semantics & Pragmatics"
                 },
                 {
                   "submission_id": 173,
